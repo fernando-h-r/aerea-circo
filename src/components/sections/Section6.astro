@@ -1,0 +1,169 @@
+---
+---
+
+<section id="clases-regulares" class="section-classes" aria-labelledby="clases-regulares-titulo">
+  <div class="forja-container">
+    <div class="classes-frame" data-forja-reveal>
+      <div class="classes-grid">
+        <div class="classes-body">
+          <h2 id="clases-regulares-titulo" class="classes-heading">Clases regulares y niveles</h2>
+          <p class="classes-text">
+            Desde quienes dan sus primeros pasos en el aire hasta intérpretes que buscan perfeccionar su técnica, nuestro equipo docente acompaña cada proceso con rigor anatómico y sensibilidad artística.
+          </p>
+          <p class="classes-text">
+            Explora nuestras seis áreas de entrenamiento: telas aéreas, trapecio, acrobacia de suelo, malabarismo, equilibrio y expresión corporal, en horarios de mañana, tarde y sábado.
+          </p>
+          <a href="/disciplinas" class="classes-cta hover-tactile-press">
+            Explorar disciplinas
+          </a>
+        </div>
+
+        <div class="classes-media">
+          <img
+            src="/images/trapezio-trapeze.webp"
+            alt="Artista de circo contemporáneo en trapecio fijo durante clase avanzada"
+            width="1024"
+            height="680"
+            loading="lazy"
+            decoding="async"
+            class="classes-img classes-img--main"
+          />
+          <img
+            src="/images/aerial-silk-ilma-akrobatiaa-silkilla-c-img.webp"
+            alt="Práctica de telas aéreas en grupo durante jornada formativa"
+            width="800"
+            height="600"
+            loading="lazy"
+            decoding="async"
+            class="classes-img classes-img--sub"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-classes {
+    background-color: var(--color-surface);
+    padding-block: 4rem;
+  }
+
+  .classes-frame {
+    background-color: var(--color-accent-contrast);
+    border-left: 14px solid var(--color-primary);
+    border-bottom: 14px solid var(--color-primary);
+  }
+
+  .classes-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
+    gap: 2.5rem;
+    align-items: stretch;
+  }
+
+  .classes-body {
+    padding: 3rem 1.5rem 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .classes-heading {
+    margin: 0 0 1.5rem 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 2.8vw, 2.375rem);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    color: var(--color-heading);
+  }
+
+  .classes-text {
+    margin: 0 0 1.25rem 0;
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    color: var(--color-text);
+    text-wrap: pretty;
+  }
+
+  .classes-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    margin-top: 0.75rem;
+    padding: 0.75rem 1.75rem;
+    background-color: var(--color-accent);
+    color: var(--color-accent-contrast);
+    font-family: var(--font-display);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color var(--duration-fast) var(--ease-out), transform 140ms var(--ease-out);
+  }
+
+  .classes-media {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.5rem;
+  }
+
+  .classes-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .classes-img--main {
+    aspect-ratio: 16 / 10;
+  }
+
+  .classes-img--sub {
+    aspect-ratio: 16 / 9;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .classes-cta:hover,
+    .classes-cta:focus-visible {
+      background-color: var(--color-accent-hover);
+    }
+  }
+
+  @media (max-width: 960px) {
+    .classes-grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1.5rem;
+    }
+
+    .classes-body {
+      padding: 2rem 1.5rem 0.5rem 1.5rem;
+    }
+
+    .classes-media {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 767px) {
+    .section-classes {
+      padding-block: 2.5rem;
+    }
+
+    .classes-frame {
+      border-left-width: 8px;
+      border-bottom-width: 8px;
+    }
+
+    .classes-media {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .classes-img--sub {
+      display: none;
+    }
+  }
+</style>

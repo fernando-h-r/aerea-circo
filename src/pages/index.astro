@@ -1,0 +1,34 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.astro';
+import Hero from '@/components/sections/Hero.astro';
+import Section2 from '@/components/sections/Section2.astro';
+import Section3 from '@/components/sections/Section3.astro';
+import Section4 from '@/components/sections/Section4.astro';
+import Section5 from '@/components/sections/Section5.astro';
+import Section6 from '@/components/sections/Section6.astro';
+import Section7 from '@/components/sections/Section7.astro';
+import Section8 from '@/components/sections/Section8.astro';
+import Section9 from '@/components/sections/Section9.astro';
+import Footer from '@/components/layout/Footer.astro';
+import site from '@/content/site.json';
+---
+
+<BaseLayout
+  title={`${site.brand.name} · Escuela y Compañía de Circo Contemporáneo`}
+  description={site.brand.tagline}
+>
+  <Header />
+  <main id="top">
+    <Hero />
+    <Section2 />
+    <Section3 />
+    <Section4 />
+    <Section5 />
+    <Section6 />
+    <Section7 />
+    <Section8 />
+    <Section9 />
+  </main>
+  <Footer />
+</BaseLayout>

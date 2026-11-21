@@ -1,0 +1,317 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.astro';
+import Footer from '@/components/layout/Footer.astro';
+import PageBanner from '@/components/sections/PageBanner.astro';
+import site from '@/content/site.json';
+
+const regularCourses = [
+  {
+    title: 'Telas aéreas y trapecio',
+    levels: 'Iniciación e Intermedio',
+    duration: 'Ciclos mensuales · 2 veces por semana (90 min)',
+    contents: 'Trepadas, llaves de pie y cadera, inversiones en barra, preparación física y secuencias fluidas.',
+    schedule: 'Lunes y miércoles 19:00 h · Martes y jueves 10:30 h',
+    audience: 'Jóvenes y adultos desde 15 años, con o sin experiencia previa.',
+  },
+  {
+    title: 'Acrobacia de suelo y portes',
+    levels: 'Básico e Intermedio',
+    duration: 'Ciclos mensuales · 2 veces por semana (90 min)',
+    contents: 'Verticales, rodadas, acrobacia dinámica, equilibrios en pareja y prevención de lesiones.',
+    schedule: 'Martes y jueves 19:30 h · Sábados 11:00 h',
+    audience: 'Personas interesadas en entrenamiento físico expresivo y trabajo colectivo.',
+  },
+  {
+    title: 'Malabarismo y equilibrio',
+    levels: 'Todos los niveles',
+    duration: 'Ciclos mensuales · 1 o 2 veces por semana (75 min)',
+    contents: 'Pelotas, clavas, ritmo, disociación, alambre tenso y rola bola.',
+    schedule: 'Miércoles 18:00 h · Sábados 12:30 h',
+    audience: 'Abierto a principiantes y practicantes con base previa.',
+  },
+  {
+    title: 'Expresión corporal y movimiento',
+    levels: 'Abierto',
+    duration: 'Ciclos mensuales · 1 vez por semana (90 min)',
+    contents: 'Danza contemporánea aplicada al circo, improvisación, peso y presencia escénica.',
+    schedule: 'Viernes 18:30 h',
+    audience: 'Estudiantes de circo, danza, teatro y público general.',
+  },
+];
+
+const intensives = [
+  {
+    title: 'Intensivo de caídas y dinámicas en tela',
+    duration: 'Sábado y domingo · 8 horas totales',
+    levels: 'Intermedio y Avanzado',
+    contents: 'Mecánica de envueltos seguros, desaceleración, control de impulso y enlace coreográfico.',
+    audience: 'Practicantes con inversión limpia en altura.',
+  },
+  {
+    title: 'Laboratorio de creación en pequeño formato',
+    duration: '3 jornadas intensivas · 12 horas totales',
+    levels: 'Intermedio y Avanzado',
+    contents: 'Dramaturgia de número circense, relación con la música y edición escénica.',
+    audience: 'Artistas que están desarrollando una pieza propia.',
+  },
+];
+---
+
+<BaseLayout
+  title={`Formación y talleres · ${site.brand.name}`}
+  description="Catálogo de cursos regulares, talleres intensivos y programa de formación anual en AÉREA."
+>
+  <Header />
+  <main id="top">
+    <PageBanner
+      title="Formación y talleres"
+      subtitle="Programas regulares, intensivos de fin de semana y formación anual para distintos niveles."
+      image="/images/aerial-silk-ilma-akrobatiaa-silkilla-c-img-2.webp"
+      imageAlt="Entrenamiento en telas aéreas en AÉREA"
+    />
+
+    <section id="regulares" class="form-section form-section--light">
+      <div class="forja-container">
+        <h2 class="form-h2">Cursos regulares</h2>
+        <div class="courses-grid">
+          {regularCourses.map((c) => (
+            <article class="course-item" data-forja-reveal>
+              <h3 class="form-h3">{c.title}</h3>
+              <dl class="course-meta">
+                <div><dt>Niveles:</dt><dd>{c.levels}</dd></div>
+                <div><dt>Duración:</dt><dd>{c.duration}</dd></div>
+                <div><dt>Contenidos:</dt><dd>{c.contents}</dd></div>
+                <div><dt>Horarios:</dt><dd>{c.schedule}</dd></div>
+                <div><dt>Dirigido a:</dt><dd>{c.audience}</dd></div>
+              </dl>
+              <a href="/contacto" class="course-cta hover-tactile-press">Solicitar cupo</a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="intensivos" class="form-section form-section--surface">
+      <div class="forja-container">
+        <h2 class="form-h2">Talleres intensivos</h2>
+        <div class="intensives-grid">
+          {intensives.map((t) => (
+            <article class="intensive-item" data-forja-reveal>
+              <h3 class="form-h3">{t.title}</h3>
+              <dl class="course-meta">
+                <div><dt>Duración:</dt><dd>{t.duration}</dd></div>
+                <div><dt>Niveles:</dt><dd>{t.levels}</dd></div>
+                <div><dt>Contenidos:</dt><dd>{t.contents}</dd></div>
+                <div><dt>Dirigido a:</dt><dd>{t.audience}</dd></div>
+              </dl>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="anual" class="form-section form-section--rose">
+      <div class="forja-container annual-box" data-forja-reveal>
+        <h2 class="form-h2">Programa de formación anual</h2>
+        <p class="form-p">
+          Programa intensivo de marzo a diciembre (12 horas semanales) orientado a personas con experiencia previa en movimiento que desean consolidar un lenguaje propio en circo contemporáneo. Incluye técnica aérea, acrobacia, preparación física, composición escénica y muestra final en teatro.
+        </p>
+        <a href="/contacto" class="annual-cta hover-tactile-press">Consultar postulaciones 2027</a>
+      </div>
+    </section>
+
+    <section id="horarios" class="form-section form-section--light">
+      <div class="forja-container">
+        <h2 class="form-h2">Resumen semanal de horarios</h2>
+        <div class="table-wrap">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Disciplina</th>
+                <th>Días</th>
+                <th>Horario</th>
+                <th>Nivel</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Telas aéreas</td>
+                <td>Lunes y miércoles</td>
+                <td>19:00 a 20:30 h</td>
+                <td>Iniciación / Intermedio</td>
+              </tr>
+              <tr>
+                <td>Trapecio fijo</td>
+                <td>Martes y jueves</td>
+                <td>10:30 a 12:00 h</td>
+                <td>Todos los niveles</td>
+              </tr>
+              <tr>
+                <td>Acrobacia de suelo</td>
+                <td>Martes y jueves</td>
+                <td>19:30 a 21:00 h</td>
+                <td>Básico / Intermedio</td>
+              </tr>
+              <tr>
+                <td>Malabarismo y equilibrio</td>
+                <td>Miércoles y sábados</td>
+                <td>18:00 h / 12:30 h</td>
+                <td>Todos los niveles</td>
+              </tr>
+              <tr>
+                <td>Expresión corporal</td>
+                <td>Viernes</td>
+                <td>18:30 a 20:00 h</td>
+                <td>Abierto</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .form-section {
+    padding-block: 4rem;
+  }
+
+  .form-section--light {
+    background-color: var(--color-bg);
+  }
+
+  .form-section--surface {
+    background-color: var(--color-surface);
+  }
+
+  .form-section--rose {
+    background-color: var(--color-surface-rose);
+    color: var(--color-primary);
+  }
+
+  .form-h2 {
+    margin: 0 0 2rem 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 2.8vw, 2.375rem);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    color: var(--color-heading);
+  }
+
+  .form-h3 {
+    margin: 0 0 1rem 0;
+    font-family: var(--font-display);
+    font-size: 1.3125rem;
+    font-weight: 700;
+    color: var(--color-heading);
+  }
+
+  .form-p {
+    margin: 0 0 1.5rem 0;
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    color: var(--color-primary);
+    max-width: 760px;
+  }
+
+  .courses-grid,
+  .intensives-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5rem;
+  }
+
+  .course-item,
+  .intensive-item {
+    border-top: 4px solid var(--color-primary);
+    padding-top: 1.5rem;
+    min-width: 0;
+  }
+
+  .course-meta {
+    margin: 0 0 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .course-meta div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .course-meta dt {
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-accent);
+  }
+
+  .course-meta dd {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--color-text);
+  }
+
+  .course-cta,
+  .annual-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.65rem 1.5rem;
+    background-color: var(--color-accent);
+    color: var(--color-accent-contrast);
+    font-family: var(--font-display);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .annual-cta {
+    background-color: var(--color-primary);
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 560px;
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    text-align: left;
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .schedule-table th {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--color-primary);
+    background-color: var(--color-surface);
+  }
+
+  @media (max-width: 767px) {
+    .courses-grid,
+    .intensives-grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 2rem;
+    }
+  }
+</style>

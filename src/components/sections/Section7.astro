@@ -1,0 +1,164 @@
+---
+---
+
+<section id="compania-escena" class="section-company" aria-labelledby="compania-escena-titulo">
+  <div class="forja-container">
+    <div class="company-frame" data-forja-reveal>
+      <div class="company-grid">
+        <div class="company-media">
+          <img
+            src="/images/duet-aerial-silk-fred-deb.webp"
+            alt="Obra escénica de la compañía AÉREA con dúo en telas aéreas"
+            width="1600"
+            height="900"
+            loading="lazy"
+            decoding="async"
+            class="company-img company-img--primary"
+          />
+          <img
+            src="/images/high-wire.webp"
+            alt="Número de equilibrio sobre alambre tenso en presentación de compañía"
+            width="1024"
+            height="797"
+            loading="lazy"
+            decoding="async"
+            class="company-img company-img--secondary"
+          />
+        </div>
+
+        <div class="company-body">
+          <h2 id="compania-escena-titulo" class="company-heading">Compañía y creación escénica</h2>
+          <p class="company-text">
+            La compañía residente de AÉREA reúne a acróbatas, bailarines y creadores sonoros en torno a montajes de circo contemporáneo propios. Nuestras obras investigan el peso, la suspensión y la dramaturgia física desde una estética sobria y cercana al público de Santiago.
+          </p>
+          <a href="/espectaculos" class="company-cta hover-tactile-press">
+            Ver espectáculos
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-company {
+    background-color: var(--color-bg);
+    padding-block: 4rem;
+  }
+
+  .company-frame {
+    background-color: var(--color-accent-contrast);
+    border-right: 14px solid var(--color-primary);
+    border-bottom: 14px solid var(--color-primary);
+  }
+
+  .company-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  .company-media {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.5rem;
+  }
+
+  .company-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  .company-img--primary {
+    aspect-ratio: 16 / 10;
+  }
+
+  .company-img--secondary {
+    aspect-ratio: 16 / 9;
+  }
+
+  .company-body {
+    padding: 2.5rem 3rem 2.5rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .company-heading {
+    margin: 0 0 1.5rem 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 2.8vw, 2.375rem);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    color: var(--color-heading);
+  }
+
+  .company-text {
+    margin: 0 0 1.75rem 0;
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    color: var(--color-text);
+    text-wrap: pretty;
+  }
+
+  .company-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0.75rem 1.75rem;
+    background-color: var(--color-accent);
+    color: var(--color-accent-contrast);
+    font-family: var(--font-display);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color var(--duration-fast) var(--ease-out), transform 140ms var(--ease-out);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .company-cta:hover,
+    .company-cta:focus-visible {
+      background-color: var(--color-accent-hover);
+    }
+  }
+
+  @media (max-width: 960px) {
+    .company-grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1.5rem;
+    }
+
+    .company-media {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .company-body {
+      padding: 0 1.5rem 2.25rem 1.5rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .section-company {
+      padding-block: 2.5rem;
+    }
+
+    .company-frame {
+      border-right-width: 8px;
+      border-bottom-width: 8px;
+    }
+
+    .company-media {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .company-img--secondary {
+      display: none;
+    }
+  }
+</style>

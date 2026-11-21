@@ -1,0 +1,136 @@
+{
+  "sectionNumber": 3,
+  "index": "S3",
+  "rawName": "section-3",
+  "componentTarget": "src/components/sections/Section3.tsx",
+  "isHero": false,
+  "layoutGrid": {
+    "masterGridAxis": "4% (58px)",
+    "desktopDisplay": "block",
+    "mobileDisplay": "block",
+    "widthRatio": "1.00",
+    "contentWidthPct": "100%",
+    "cBoxLeft": 0,
+    "gap": "normal",
+    "verticalAirRatio": "0% aire",
+    "prevOverlapPx": 0,
+    "heightResolved": {
+      "raw": "523px",
+      "decision": "css-variable",
+      "varName": "--s3-height",
+      "classOrVar": "var(--s3-height, 523px)",
+      "declaration": "--s3-height: 523px;"
+    }
+  },
+  "internalAnatomy": {
+    "isOverflow": false,
+    "slider": null,
+    "split": {
+      "isEqualColumns": true,
+      "columnsCount": 3,
+      "colWidthPx": "414px",
+      "colWidthPct": "29%",
+      "mediaHeightPx": "414px"
+    }
+  },
+  "spacingResolved": {
+    "rawDesktop": "0px 0px 0px 0px",
+    "rawMobile": "60px 0px",
+    "pt": {
+      "raw": "0px",
+      "decision": "tailwind-scale",
+      "classOrVar": "pt-0"
+    },
+    "pb": {
+      "raw": "0px",
+      "decision": "tailwind-scale",
+      "classOrVar": "pb-0"
+    },
+    "pl": {
+      "raw": "0px",
+      "decision": "tailwind-scale",
+      "classOrVar": "pl-0"
+    },
+    "pr": {
+      "raw": "0px",
+      "decision": "tailwind-scale",
+      "classOrVar": "pr-0"
+    }
+  },
+  "surface": {
+    "sectionBg": "inherit",
+    "sectionColor": "rgb(0, 0, 0)",
+    "hairlineBorder": "none",
+    "card": {
+      "isTransparent": true,
+      "rawBg": "transparent",
+      "border": "none",
+      "radiusResolved": {
+        "raw": "0px",
+        "decision": "tailwind-scale",
+        "classOrVar": "rounded-none"
+      },
+      "shadow": "none",
+      "backdrop": "none"
+    }
+  },
+  "heroSpec": null,
+  "ctaSpec": {
+    "textSample": "My Account",
+    "width": "90px",
+    "height": {
+      "raw": "20px",
+      "decision": "tailwind-scale",
+      "classOrVar": "h-5"
+    },
+    "bg": "rgba(0, 0, 0, 0)",
+    "color": "rgb(255, 255, 255)",
+    "border": "none",
+    "radius": {
+      "raw": "0px",
+      "decision": "tailwind-scale",
+      "classOrVar": "rounded-none"
+    },
+    "hoverDelta": "sin delta medible"
+  },
+  "typography": {
+    "fontFamily": "Inter",
+    "heading": null,
+    "body": {
+      "sizeResolved": {
+        "raw": "18px",
+        "decision": "tailwind-scale",
+        "classOrVar": "text-lg"
+      },
+      "lineHeight": "28.8px",
+      "weight": "400",
+      "color": "rgb(255, 255, 255)"
+    }
+  },
+  "contentInventory": {
+    "countsSummary": "3H, 0P, 2CTA, 0Media",
+    "textSamples": [
+      "H: YOUTH CIRCUS",
+      "H: PRIVATE HIRE",
+      "H: WEDDINGS",
+      "CTA: Find out more"
+    ]
+  },
+  "assets": {
+    "savedImages": [
+      "css-bg (414x414)",
+      "css-bg (414x414)",
+      "css-bg (414x414)"
+    ],
+    "cssMediaCount": 3
+  },
+  "visualRefs": [
+    "referente-scroll.png"
+  ],
+  "kineticStage": null,
+  "invariants": {
+    "lcpFrameZero": false,
+    "noMotionOpacityZeroOnMount": false,
+    "semanticTag": "section"
+  }
+}

@@ -1,0 +1,197 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.astro';
+import Footer from '@/components/layout/Footer.astro';
+import PageBanner from '@/components/sections/PageBanner.astro';
+import site from '@/content/site.json';
+---
+
+<BaseLayout
+  title={`Contacto · ${site.brand.name}`}
+  description="Ubicación, horarios de atención, inscripción y canales directos por WhatsApp y correo electrónico de AÉREA en Santiago de Chile."
+>
+  <Header />
+  <main id="top">
+    <PageBanner
+      title="Contacto e inscripción"
+      subtitle="Atención directa sin formularios: escríbenos por WhatsApp o correo para consultar cupos, clases de prueba y funciones."
+      image="/images/aerial-silk-ilma-akrobatiaa-silkilla-c-img.webp"
+      imageAlt="Espacio de entrenamiento de AÉREA en Santiago"
+    />
+
+    <section class="contact-section">
+      <div class="forja-container contact-grid">
+        <div class="contact-block" data-forja-reveal>
+          <h2 class="contact-h2">Canales directos</h2>
+          <p class="contact-p">
+            Para inscribirte en un curso regular, sumarte a un taller intensivo o reservar entradas para la compañía, contáctanos directamente por cualquiera de estos medios.
+          </p>
+
+          <div class="contact-actions">
+            <a
+              href={site.contact.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-btn contact-btn--primary hover-tactile-press"
+            >
+              Escribir por WhatsApp ({site.contact.phone})
+            </a>
+            <a
+              href={`mailto:${site.contact.email}`}
+              class="contact-btn contact-btn--secondary hover-tactile-press"
+            >
+              Enviar correo a {site.contact.email}
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-block contact-details" data-forja-reveal>
+          <h2 class="contact-h2">Ubicación y horarios</h2>
+          <dl class="contact-list">
+            <div>
+              <dt>Dirección</dt>
+              <dd>{site.contact.address}, {site.contact.city}</dd>
+            </div>
+            <div>
+              <dt>Referencia de acceso</dt>
+              <dd>A pasos de Metro Irarrázaval (L3 y L5) y Metro Monseñor Eyzaguirre (L3).</dd>
+            </div>
+            <div>
+              <dt>Horarios de atención</dt>
+              <dd>{site.contact.hours}</dd>
+            </div>
+            <div>
+              <dt>Proceso de inscripción</dt>
+              <dd>
+                Indícanos tu disciplina de interés y nivel aproximado por WhatsApp o correo. Confirmamos cupo disponible, horario y te enviamos los datos de matrícula mensual.
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .contact-section {
+    background-color: var(--color-bg);
+    padding-block: 4.5rem;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3.5rem;
+    align-items: start;
+  }
+
+  .contact-h2 {
+    margin: 0 0 1.25rem 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 2.6vw, 2.25rem);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    color: var(--color-heading);
+  }
+
+  .contact-p {
+    margin: 0 0 2rem 0;
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    color: var(--color-text);
+  }
+
+  .contact-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0.85rem 1.75rem;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color var(--duration-fast) var(--ease-out), transform 140ms var(--ease-out);
+  }
+
+  .contact-btn--primary {
+    background-color: var(--color-accent);
+    color: var(--color-accent-contrast);
+  }
+
+  .contact-btn--secondary {
+    background-color: var(--color-primary);
+    color: var(--color-accent-contrast);
+  }
+
+  .contact-details {
+    background-color: var(--color-surface);
+    padding: 2.25rem;
+    border-left: 8px solid var(--color-primary);
+  }
+
+  .contact-list {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .contact-list dt {
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 0.25rem;
+  }
+
+  .contact-list dd {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--color-text);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .contact-btn--primary:hover,
+    .contact-btn--primary:focus-visible {
+      background-color: var(--color-accent-hover);
+    }
+
+    .contact-btn--secondary:hover,
+    .contact-btn--secondary:focus-visible {
+      background-color: var(--color-accent);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .contact-section {
+      padding-block: 3rem;
+    }
+
+    .contact-grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 2.5rem;
+    }
+
+    .contact-details {
+      padding: 1.5rem;
+    }
+
+    .contact-btn {
+      width: 100%;
+    }
+  }
+</style>

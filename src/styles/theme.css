@@ -1,0 +1,89 @@
+/**
+ * TEMA BESPOKE AÉREA — Escuela y Compañía de Circo Contemporáneo
+ * Paleta oficial WCAG 2.2 AA:
+ * - Verde azulado principal: #043736
+ * - Cobre acento y botones: #A25524
+ * - Rosa empolvado: #D4BCC0
+ * - Verde oliva complementario: #7F8000 (variación accesible texto: #555600)
+ * - Blanco cálido superficie clara: #F5F1EB
+ */
+
+:root {
+  --hue-base: 179;
+  --hue-accent: 23;
+  --seed-hue: var(--hue-base);
+
+  /* Superficies */
+  --color-bg: #F5F1EB;
+  --color-surface: #EDE7DE;
+  --color-surface-elevated: #E3DBD0;
+  --color-surface-rose: #D4BCC0;
+  --color-surface-dark: #043736;
+  --color-surface-deep: #022625;
+
+  /* Marca y Acentos */
+  --color-primary: #043736;
+  --color-primary-contrast: #F5F1EB;
+  --color-accent: #A25524;
+  --color-accent-hover: #874319;
+  --color-accent-contrast: #FFFFFF;
+  --color-rose: #D4BCC0;
+  --color-olive: #7F8000;
+  --color-olive-text: #555600;
+
+  /* Texto sobre superficie clara (#F5F1EB) — contraste >= 4.5:1 */
+  --color-text-contrast: #043736;
+  --color-text: #043736;
+  --color-heading: #043736;
+  --color-text-muted: #2B5251;
+  --color-text-subtle: #3B605F;
+
+  /* Bordes y Estados */
+  --color-border: rgba(4, 55, 54, 0.16);
+  --color-border-hover: rgba(4, 55, 54, 0.42);
+  --color-border-light: rgba(245, 241, 235, 0.35);
+  --color-border-subtle-light: rgba(245, 241, 235, 0.16);
+  --color-status-success: #2C6B4E;
+  --color-status-error: #9B2C2C;
+  --color-scrim: rgba(2, 22, 21, 0.72);
+  --hero-scrim-desktop: linear-gradient(90deg, rgba(2, 22, 21, 0.86) 0%, rgba(2, 22, 21, 0.54) 48%, rgba(2, 22, 21, 0.18) 100%);
+  --hero-scrim-mobile: linear-gradient(180deg, rgba(2, 22, 21, 0.45) 0%, rgba(2, 22, 21, 0.82) 100%);
+
+  /* Tipografía (Recon SSoT) */
+  --font-display: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --radius-sm: 0px;
+  --radius-md: 0px;
+
+  /* Curvas y Duración Canónicas */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-jakub: var(--ease-out);
+
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+
+  /* Variables Cinéticas */
+  --motion-factor: 0.5;
+  --kinetic-lift-y: calc(var(--motion-factor) * -3px);
+  --kinetic-glide-x: calc(var(--motion-factor) * 4px);
+  --kinetic-scale: calc(1 + (var(--motion-factor) * 0.04));
+  --kinetic-spotlight-width: calc(2px + (var(--motion-factor) * 2px));
+  --cta-hover-bg: var(--color-accent-hover);
+  --cta-hover-lift: 0px;
+
+  /* Geometría y Layout Enforzados (Recon) */
+  --forja-container-max: 1324px;
+  --forja-section-py: 64px;
+  --forja-header-h: 124px;
+  --forja-card-pad: 0px;
+  --forja-card-w: auto;
+}
+
+.forja-container {
+  width: min(100% - 2rem, var(--forja-container-max, 1324px));
+  margin-inline: auto;
+}

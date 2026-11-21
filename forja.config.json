@@ -1,0 +1,29 @@
+{
+  "project": {
+    "slug": "aerea-circo",
+    "name": "Aerea Circo",
+    "stack": "astro",
+    "seed": "none",
+    "auth": false,
+    "archetype": "neutral",
+    "polarity": "light",
+    "createdAt": "2026-11-21",
+    "version": "0.4.0",
+    "author": "Fernando Herreros R. · Widget Zero (Prizmith SpA)",
+    "hasBrief": false,
+    "transformMode": "adaptation"
+  },
+  "visualGrounding": {
+    "mode": "reference-grounded",
+    "archetype": "neutral",
+    "polarity": "light",
+    "seedHue": 260,
+    "paletteStatus": "derived-from-slug"
+  },
+  "governance": {
+    "responsibleDataCollection": true,
+    "strictCSP": true,
+    "antiSlopAudit": true
+  },
+  "antiSlopFilter": true
+}

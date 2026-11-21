@@ -1,0 +1,151 @@
+---
+import site from '@/content/site.json';
+
+const footerLinks = [
+  ...site.footer.links,
+  { label: 'Privacidad', href: '/privacidad' },
+];
+---
+
+<footer class="site-footer" aria-label="Pie de página">
+  <div class="forja-container site-footer__inner">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <span class="site-footer__name">{site.brand.fullName}</span>
+        <span class="site-footer__location">{site.contact.address}, {site.contact.city}</span>
+      </div>
+
+      <ul class="site-footer__social" aria-label="Redes sociales">
+        {site.footer.social.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="site-footer__social-link hover-editorial-underline"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <nav class="site-footer__nav" aria-label="Enlaces del pie de página">
+      <ul class="site-footer__links">
+        {footerLinks.map((link) => (
+          <li>
+            <a href={link.href} class="site-footer__link hover-editorial-underline">
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <div class="site-footer__legal">
+      <p class="site-footer__copy">{site.brand.legalNotice}</p>
+      <p class="site-footer__credits">
+        Créditos fotográficos (CC BY / CC BY-SA): Fridabidet, Anneli Salo, Jeangagnon (Wikimedia Commons) y Filipe Dâmaso Saraiva, hbp_pix (Flickr).
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: var(--color-primary);
+    color: var(--color-accent-contrast);
+    padding-block: 3.5rem 3rem;
+  }
+
+  .site-footer__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .site-footer__top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-border-subtle-light);
+  }
+
+  .site-footer__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    min-width: 0;
+  }
+
+  .site-footer__name {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-accent-contrast);
+  }
+
+  .site-footer__location {
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    color: var(--color-rose);
+  }
+
+  .site-footer__social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .site-footer__social-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--color-accent-contrast);
+    font-family: var(--font-display);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .site-footer__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.75rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .site-footer__link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--color-accent-contrast);
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    text-decoration: none;
+  }
+
+  .site-footer__legal {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .site-footer__copy,
+  .site-footer__credits {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--color-rose);
+  }
+</style>

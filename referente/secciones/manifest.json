@@ -1,0 +1,156 @@
+{
+  "totalSections": 10,
+  "generatedAt": "2026-11-21T03:26:56.877Z",
+  "sourceFile": "test/aerea-circo/referente/raw-telemetry.json",
+  "generatedVariables": [
+    "--s1-height: 720px;",
+    "--hero-h1-size: 55px;",
+    "--s2-height: 523px;",
+    "--s3-height: 523px;",
+    "--s4-height: 432px;",
+    "--s5-height: 536px;",
+    "--s6-height: 514px;",
+    "--s7-height: 570px;",
+    "--s8-height: 720px;",
+    "--s9-height: 409px;",
+    "--s10-height: 228px;"
+  ],
+  "sections": [
+    {
+      "number": 1,
+      "index": "S1",
+      "rawName": "post-5586",
+      "file": "seccion-1.json",
+      "componentTarget": "src/components/sections/Hero.tsx",
+      "height": "var(--s1-height, 720px)",
+      "anatomy": "standard",
+      "inventory": "1H, 0P, 0CTA, 0Media",
+      "hasStickyStage": false,
+      "visualRefs": [
+        "referente-desktop.png"
+      ]
+    },
+    {
+      "number": 2,
+      "index": "S2",
+      "rawName": "section-2",
+      "file": "seccion-2.json",
+      "componentTarget": "src/components/sections/Section2.tsx",
+      "height": "var(--s2-height, 523px)",
+      "anatomy": "equal-split",
+      "inventory": "3H, 0P, 2CTA, 0Media",
+      "hasStickyStage": false,
+      "visualRefs": [
+        "referente-scroll.png"
+      ]
+    },
+    {
+      "number": 3,
+      "index": "S3",
+      "rawName": "section-3",
+      "file": "seccion-3.json",
+      "componentTarget": "src/components/sections/Section3.tsx",
+      "height": "var(--s3-height, 523px)",
+      "anatomy": "equal-split",
+      "inventory": "3H, 0P, 2CTA, 0Media",
+      "hasStickyStage": false,
+      "visualRefs": [
+        "referente-scroll.png"
+      ]
+    },
+    {
+      "number": 4,
+      "index": "S4",
+      "rawName": "section-4",
+      "file": "seccion-4.json",
+      "componentTarget": "src/components/sections/Section4.tsx",
+      "height": "var(--s4-height, 432px)",
+      "anatomy": "standard",
+      "inventory": "1H, 4P, 0CTA, 0Media",
+      "hasStickyStage": false,
+      "visualRefs": [
+        "referente-scroll-2.png"
+      ]
+    },
+    {
+      "number": 5,
+      "index": "S5",
+      "rawName": "section-5",
+      "file": "seccion-5.json",
+      "componentTarget": "src/components/sections/Section5.tsx",
+      "height": "var(--s5-height, 536px)",
+      "anatomy": "standard",
+      "inventory": "1H, 3P, 2CTA, 2Media",
+      "hasStickyStage": false,
+      "visualRefs": [
+        "referente-scroll-2.png"
+      ]
+    },
+    {
+      "number": 6,
+      "index": "S6",
+      "rawName": "section-6",
+      "file": "seccion-6.json",
+      "componentTarget": "src/components/sections/Section6.tsx",
+      "height": "var(--s6-height, 514px)",
+      "anatomy": "standard",
+      "inventory": "1H, 2P, 1CTA, 2Media",
+      "hasStickyStage": false,
+      "visualRefs": [
+        "referente-scroll-3.png"
+      ]
+    },
+    {
+      "number": 7,
+      "index": "S7",
+      "rawName": "section-7",
+      "file": "seccion-7.json",
+      "componentTarget": "src/components/sections/Section7.tsx",
+      "height": "var(--s7-height, 570px)",
+      "anatomy": "standard",
+      "inventory": "1H, 1P, 1CTA, 2Media",
+      "hasStickyStage": false,
+      "visualRefs": [
+        "referente-scroll-3.png"
+      ]
+    },
+    {
+      "number": 8,
+      "index": "S8",
+      "rawName": "section-8",
+      "file": "seccion-8.json",
+      "componentTarget": "src/components/sections/Section8.tsx",
+      "height": "var(--s8-height, 720px)",
+      "anatomy": "standard",
+      "inventory": "1H, 2P, 1CTA, 0Media",
+      "hasStickyStage": false,
+      "visualRefs": [
+        "referente-scroll-4.png"
+      ]
+    },
+    {
+      "number": 9,
+      "index": "S9",
+      "rawName": "section-9",
+      "file": "seccion-9.json",
+      "componentTarget": "src/components/sections/Section9.tsx",
+      "height": "var(--s9-height, 409px)",
+      "anatomy": "equal-split",
+      "inventory": "4H, 0P, 2CTA, 0Media",
+      "hasStickyStage": false,
+      "visualRefs": []
+    },
+    {
+      "number": 10,
+      "index": "S10",
+      "rawName": "section-10",
+      "file": "seccion-10.json",
+      "componentTarget": "src/components/sections/Section10.tsx",
+      "height": "var(--s10-height, 228px)",
+      "anatomy": "standard",
+      "inventory": "0H, 0P, 0CTA, 6Media",
+      "hasStickyStage": false,
+      "visualRefs": []
+    }
+  ]
+}

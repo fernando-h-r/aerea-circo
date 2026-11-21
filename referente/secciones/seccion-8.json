@@ -1,0 +1,126 @@
+{
+  "sectionNumber": 8,
+  "index": "S8",
+  "rawName": "section-8",
+  "componentTarget": "src/components/sections/Section8.tsx",
+  "isHero": false,
+  "layoutGrid": {
+    "masterGridAxis": "4% (58px)",
+    "desktopDisplay": "block",
+    "mobileDisplay": "flex-column",
+    "widthRatio": "1.00",
+    "contentWidthPct": "100%",
+    "cBoxLeft": 0,
+    "gap": "normal",
+    "verticalAirRatio": "0% aire",
+    "prevOverlapPx": -64,
+    "heightResolved": {
+      "raw": "720px",
+      "decision": "css-variable",
+      "varName": "--s8-height",
+      "classOrVar": "var(--s8-height, 720px)",
+      "declaration": "--s8-height: 720px;"
+    }
+  },
+  "internalAnatomy": {
+    "isOverflow": false,
+    "slider": null,
+    "split": null
+  },
+  "spacingResolved": {
+    "rawDesktop": "0px 0px 0px 0px",
+    "rawMobile": "N/A",
+    "pt": {
+      "raw": "0px",
+      "decision": "tailwind-scale",
+      "classOrVar": "pt-0"
+    },
+    "pb": {
+      "raw": "0px",
+      "decision": "tailwind-scale",
+      "classOrVar": "pb-0"
+    },
+    "pl": {
+      "raw": "0px",
+      "decision": "tailwind-scale",
+      "classOrVar": "pl-0"
+    },
+    "pr": {
+      "raw": "0px",
+      "decision": "tailwind-scale",
+      "classOrVar": "pr-0"
+    }
+  },
+  "surface": {
+    "sectionBg": "inherit",
+    "sectionColor": "rgb(0, 0, 0)",
+    "hairlineBorder": "none",
+    "card": {
+      "isTransparent": true,
+      "rawBg": "transparent",
+      "border": "none",
+      "radiusResolved": {
+        "raw": "0px",
+        "decision": "tailwind-scale",
+        "classOrVar": "rounded-none"
+      },
+      "shadow": "none",
+      "backdrop": "none"
+    }
+  },
+  "heroSpec": null,
+  "ctaSpec": {
+    "textSample": "My Account",
+    "width": "90px",
+    "height": {
+      "raw": "20px",
+      "decision": "tailwind-scale",
+      "classOrVar": "h-5"
+    },
+    "bg": "rgba(0, 0, 0, 0)",
+    "color": "rgb(255, 255, 255)",
+    "border": "none",
+    "radius": {
+      "raw": "0px",
+      "decision": "tailwind-scale",
+      "classOrVar": "rounded-none"
+    },
+    "hoverDelta": "sin delta medible"
+  },
+  "typography": {
+    "fontFamily": "Inter",
+    "heading": null,
+    "body": {
+      "sizeResolved": {
+        "raw": "18px",
+        "decision": "tailwind-scale",
+        "classOrVar": "text-lg"
+      },
+      "lineHeight": "28.8px",
+      "weight": "400",
+      "color": "rgb(255, 255, 255)"
+    }
+  },
+  "contentInventory": {
+    "countsSummary": "1H, 2P, 1CTA, 0Media",
+    "textSamples": [
+      "H: Youth Circus",
+      "P: Circomedia Youth Circus is one of the biggest in the UK with over 500 students. ",
+      "P: Led by our professional circus tutors, our after-school sessions offer a varied ",
+      "CTA: Watch the video now"
+    ]
+  },
+  "assets": {
+    "savedImages": [],
+    "cssMediaCount": 0
+  },
+  "visualRefs": [
+    "referente-scroll-4.png"
+  ],
+  "kineticStage": null,
+  "invariants": {
+    "lcpFrameZero": false,
+    "noMotionOpacityZeroOnMount": false,
+    "semanticTag": "section"
+  }
+}

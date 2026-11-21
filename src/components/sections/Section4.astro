@@ -1,0 +1,82 @@
+---
+---
+
+<section id="sobre-aerea" class="section-about" aria-labelledby="sobre-aerea-titulo">
+  <div class="forja-container">
+    <div class="about-inner" data-forja-reveal>
+      <h2 id="sobre-aerea-titulo" class="about-heading">Sobre AÉREA</h2>
+      <div class="about-columns">
+        <div class="about-col">
+          <p class="about-text">
+            Nacida en Santiago de Chile, AÉREA es una escuela y compañía dedicada al circo contemporáneo y las artes escénicas. Creemos en el cuerpo como territorio de investigación, técnica rigurosa y poética visual abierta a personas de todas las experiencias.
+          </p>
+          <p class="about-text">
+            Nuestros programas regulares, talleres intensivos y procesos de formación especializada unen el dominio técnico aéreo y de suelo con el lenguaje coreográfico, la dramaturgia física y la creación colectiva.
+          </p>
+        </div>
+        <div class="about-col">
+          <p class="about-text">
+            Desde nuestro galpón acondicionado en Ñuñoa, la compañía residente desarrolla espectáculos originales que dialogan con la danza, la música en vivo y el teatro físico en escenarios nacionales y festivales.
+          </p>
+          <p class="about-text">
+            Ya sea que des tu primer paso en telas o trapecio, o busques profundizar tu práctica escénica junto a docentes en activo, AÉREA ofrece un espacio de exploración artística, cuidado corporal y comunidad.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-about {
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    padding-block: 4.5rem;
+  }
+
+  .about-inner {
+    max-width: 1120px;
+  }
+
+  .about-heading {
+    margin: 0 0 2rem 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 2.8vw, 2.375rem);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    color: var(--color-heading);
+  }
+
+  .about-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5rem;
+  }
+
+  .about-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .about-text {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    color: var(--color-text);
+    text-wrap: pretty;
+  }
+
+  @media (max-width: 767px) {
+    .section-about {
+      padding-block: 3rem;
+    }
+
+    .about-columns {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1.25rem;
+    }
+  }
+</style>

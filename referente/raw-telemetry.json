@@ -1,0 +1,1879 @@
+{
+  "url": "https://www.circomedia.com/",
+  "slug": "aerea-circo",
+  "extractedAt": "2026-11-21T03:26:56.777Z",
+  "palette": {
+    "mode": "light"
+  },
+  "telemetryErrors": [],
+  "telemetryWarnings": [],
+  "siteArchitecture": {
+    "type": "MULTI_PAGE",
+    "navModel": "hybrid-nav",
+    "homeUrl": "https://www.circomedia.com/",
+    "routesCount": 4,
+    "routes": [
+      {
+        "path": "/",
+        "slug": "",
+        "name": "Inicio",
+        "template": "landing",
+        "isHome": true
+      },
+      {
+        "path": "/introducing-our-academy/",
+        "slug": "introducing-our-academy",
+        "name": "Introducing Our Academy",
+        "template": "content-page",
+        "url": "https://www.circomedia.com/introducing-our-academy/",
+        "screenshot": "referente-introducing-our-academy.png"
+      },
+      {
+        "path": "/the-btec-course/",
+        "slug": "the-btec-course",
+        "name": "The Btec Course",
+        "template": "content-page",
+        "url": "https://www.circomedia.com/the-btec-course/",
+        "screenshot": "referente-the-btec-course.png"
+      },
+      {
+        "path": "/ba-hons-contemporary-circus-with-physical-theatre/",
+        "slug": "ba-hons-contemporary-circus-with-physical-theatre",
+        "name": "Ba Hons Contemporary Circus With Physical Theatre",
+        "template": "content-page",
+        "url": "https://www.circomedia.com/ba-hons-contemporary-circus-with-physical-theatre/",
+        "screenshot": "referente-ba-hons-contemporary-circus-with-physical-theatre.png"
+      }
+    ],
+    "geometry": {
+      "containerMaxWidth": {
+        "value": 1324,
+        "unit": "px",
+        "tolerance": 66,
+        "source": "recon",
+        "status": "verificable"
+      },
+      "headerHeightResting": {
+        "value": 124,
+        "unit": "px",
+        "tolerance": 12,
+        "source": "recon",
+        "status": "verificable"
+      },
+      "headerHeightScrolled": {
+        "value": 124,
+        "unit": "px",
+        "tolerance": 12,
+        "source": "recon",
+        "status": "verificable"
+      },
+      "headerHeroRelation": {
+        "value": "stacked",
+        "source": "recon",
+        "status": "verificable"
+      },
+      "headerBgResting": {
+        "value": "rgb(29, 125, 80)",
+        "source": "recon",
+        "status": "verificable"
+      },
+      "headerNavType": {
+        "value": "hybrid-nav",
+        "source": "recon",
+        "status": "verificable"
+      },
+      "headerActionStyle": {
+        "value": "text-only",
+        "source": "recon",
+        "status": "verificable"
+      },
+      "headerStrategy": {
+        "value": "flujo-normal",
+        "source": "recon",
+        "status": "verificable"
+      },
+      "masterPadding": {
+        "value": "4%",
+        "source": "recon",
+        "status": "verificable"
+      }
+    }
+  },
+  "seedRecommendation": {
+    "seed": "checkout",
+    "reason": "Detectados controles de carrito, catálogo o intención transaccional en el DOM",
+    "heuristic": true
+  },
+  "passiveTokens": {
+    "engines": [
+      "CSS / Web Animations nativo"
+    ],
+    "hasWebGL": false,
+    "canvases": [],
+    "hasDomTransitionAll": true,
+    "loadedFonts": [
+      "Inter (100 900)",
+      "Roboto (400, 700)"
+    ],
+    "typography": {
+      "fontFamily": "Inter",
+      "h1": {
+        "tag": "h2",
+        "sample": "CIRCUS FOR EVERYONE",
+        "family": "Inter",
+        "size": "55px",
+        "weight": "600",
+        "lineHeight": "60.5px",
+        "tracking": "normal",
+        "transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "ratioToBody": "3.06x"
+      },
+      "h2": null,
+      "h3": null,
+      "preH1Text": {
+        "tag": "div",
+        "sample": "AboutAbout UsHow to find usNewsOur BoardAcademyOur AcademyBTEC CourseBA (Hons) Contemporary Circus with Physical TheatreDiplomaShort CoursesOpen DaysOur TeachersLife in BristolOur GraduatesPolicies, Terms & ConditionsYouth CircusYouth Circus InformationYouth Circus EnrolmentYouth Circus Ages 2 – 4Under 18s Aerial Classes16-21 ClassHoliday Youth Circus CampsYouth Circus FAQsYouth Circus Access SchemeClasses Terms & ConditionsClassesAll ClassesAcrobatic ClassesHandstand ClassesAerial Hoop ClassesSilks & Rope ClassesStatic Trapeze ClassesMixed AerialFlying Trapeze ClassesAdult Class Drop InClasses Terms & ConditionsGift VouchersWhat’s OnWhat’s OnGift VouchersVenue HireHire Our VenueChristmas PartiesWeddingsConferencesOur SpacesStudio HireSupport UsDonateMonthly DonationsOur SponsorsSupporting YouSupporting ArtistsProfessional MembershipWorkshops and OutreachWork ExperienceJobs",
+        "family": "Roboto",
+        "size": "16px",
+        "weight": "400",
+        "lineHeight": "16px",
+        "tracking": "normal",
+        "transform": "none",
+        "color": "rgb(255, 255, 255)",
+        "ratioToBody": "0.89x"
+      },
+      "mono": null,
+      "body": {
+        "family": "Roboto",
+        "size": "18px",
+        "weight": "400",
+        "lineHeight": "28.8px",
+        "color": "rgb(255, 255, 255)"
+      }
+    },
+    "surfacePalette": {
+      "bodyBg": "rgb(255, 255, 255)",
+      "bodyColor": "rgb(0, 0, 0)",
+      "hairlineBorder": "none",
+      "cards": null,
+      "allCardSamples": [],
+      "cardSamplesCount": 0
+    },
+    "masterGridAxis": "4% (58px)",
+    "masterAlignmentPct": "4%",
+    "primaryCta": {
+      "text": "My Account",
+      "width": "90px",
+      "height": "20px",
+      "padding": "0px 0px",
+      "radius": "0px",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)",
+      "border": "none",
+      "transform": "none",
+      "shadow": "none",
+      "hoverDelta": "sin delta medible"
+    },
+    "heroBlueprint": {
+      "heightPx": "720px",
+      "viewportRatio": "0.80vh",
+      "contentAnchor": "4% left / 30% top",
+      "textContainerWidth": "43%",
+      "mediaTreatment": "none",
+      "hasStageMedia": false,
+      "heroSignature": [
+        "h1"
+      ]
+    },
+    "sectionsBlueprint": [
+      {
+        "index": "S1",
+        "name": "post-5586",
+        "visualRefs": [
+          "referente-desktop.png"
+        ],
+        "heightPx": "720px",
+        "presenceVh": "80vh",
+        "widthRatio": "0.43",
+        "contentWidthPct": "43%",
+        "cBoxLeft": 58,
+        "verticalAirRatio": "92% aire",
+        "prevOverlapPx": 0,
+        "desktopLayout": "inline-block",
+        "gap": "normal",
+        "desktopPadding": "0px 0px 0px 0px",
+        "bg": "inherit",
+        "bgImage": null,
+        "color": "rgb(0, 0, 0)",
+        "inventory": "1H, 0P, 0CTA, 0Media",
+        "textSamples": [
+          "H: CIRCUS FOR EVERYONE"
+        ]
+      },
+      {
+        "index": "S2",
+        "name": "section-2",
+        "visualRefs": [
+          "referente-scroll.png"
+        ],
+        "heightPx": "523px",
+        "presenceVh": "58vh",
+        "widthRatio": "1.00",
+        "contentWidthPct": "100%",
+        "cBoxLeft": 0,
+        "verticalAirRatio": "0% aire",
+        "prevOverlapPx": 0,
+        "desktopLayout": "block",
+        "gap": "normal",
+        "desktopPadding": "0px 0px 0px 0px",
+        "bg": "inherit",
+        "bgImage": null,
+        "color": "rgb(0, 0, 0)",
+        "inventory": "3H, 0P, 2CTA, 0Media",
+        "textSamples": [
+          "H: STUDY WITH US",
+          "CTA: Find out more",
+          "H: WHAT'S ON",
+          "H: CLASSES"
+        ],
+        "savedAssets": [
+          "css-bg (414x414)",
+          "css-bg (414x414)",
+          "css-bg (414x414)"
+        ],
+        "cssMediaCount": 3
+      },
+      {
+        "index": "S3",
+        "name": "section-3",
+        "visualRefs": [
+          "referente-scroll.png"
+        ],
+        "heightPx": "523px",
+        "presenceVh": "58vh",
+        "widthRatio": "1.00",
+        "contentWidthPct": "100%",
+        "cBoxLeft": 0,
+        "verticalAirRatio": "0% aire",
+        "prevOverlapPx": 0,
+        "desktopLayout": "block",
+        "gap": "normal",
+        "desktopPadding": "0px 0px 0px 0px",
+        "bg": "inherit",
+        "bgImage": null,
+        "color": "rgb(0, 0, 0)",
+        "inventory": "3H, 0P, 2CTA, 0Media",
+        "textSamples": [
+          "H: YOUTH CIRCUS",
+          "H: PRIVATE HIRE",
+          "H: WEDDINGS",
+          "CTA: Find out more"
+        ],
+        "savedAssets": [
+          "css-bg (414x414)",
+          "css-bg (414x414)",
+          "css-bg (414x414)"
+        ],
+        "cssMediaCount": 3
+      },
+      {
+        "index": "S4",
+        "name": "section-4",
+        "visualRefs": [
+          "referente-scroll-2.png"
+        ],
+        "heightPx": "432px",
+        "presenceVh": "48vh",
+        "widthRatio": "1.00",
+        "contentWidthPct": "100%",
+        "cBoxLeft": 0,
+        "verticalAirRatio": "0% aire",
+        "prevOverlapPx": 0,
+        "desktopLayout": "block",
+        "gap": "normal",
+        "desktopPadding": "0px 0px 0px 0px",
+        "bg": "inherit",
+        "bgImage": null,
+        "color": "rgb(0, 0, 0)",
+        "inventory": "1H, 4P, 0CTA, 0Media",
+        "textSamples": [
+          "H: About us",
+          "P: Founded in 1984, Circomedia is a world-renowned centre for contemporary circus a",
+          "P: Our BTEC, Degree and Diploma courses combine technical and physical training wit",
+          "P: We curate a fascinating and innovative performance programme from our venue in t",
+          "P: Our adult classes cover a range of aerial and acrobatic disciplines and are desi"
+        ]
+      },
+      {
+        "index": "S5",
+        "name": "section-5",
+        "visualRefs": [
+          "referente-scroll-2.png"
+        ],
+        "heightPx": "536px",
+        "presenceVh": "60vh",
+        "widthRatio": "1.00",
+        "contentWidthPct": "100%",
+        "cBoxLeft": 0,
+        "verticalAirRatio": "0% aire",
+        "prevOverlapPx": 0,
+        "desktopLayout": "block",
+        "gap": "normal",
+        "desktopPadding": "0px 0px 0px 0px",
+        "bg": "inherit",
+        "bgImage": null,
+        "color": "rgb(0, 0, 0)",
+        "inventory": "1H, 3P, 2CTA, 2Media",
+        "textSamples": [
+          "H: Introducing Our Academy",
+          "P: Circomedia Academy is a place to train, create and grow as a contemporary circus",
+          "P: City of Bristol College",
+          "P: Northern School of Contemporary Dance",
+          "CTA: Find out more"
+        ],
+        "savedAssets": [
+          "img (397x408)"
+        ],
+        "cssMediaCount": 0
+      },
+      {
+        "index": "S6",
+        "name": "section-6",
+        "visualRefs": [
+          "referente-scroll-3.png"
+        ],
+        "heightPx": "514px",
+        "presenceVh": "57vh",
+        "widthRatio": "1.00",
+        "contentWidthPct": "100%",
+        "cBoxLeft": 0,
+        "verticalAirRatio": "0% aire",
+        "prevOverlapPx": 0,
+        "desktopLayout": "block",
+        "gap": "normal",
+        "desktopPadding": "0px 0px 0px 0px",
+        "bg": "inherit",
+        "bgImage": null,
+        "color": "rgb(0, 0, 0)",
+        "inventory": "1H, 2P, 1CTA, 2Media",
+        "textSamples": [
+          "H: Adult Classes",
+          "P: From complete beginners taking their first tentative steps into aerial, to those",
+          "P: Why not use our new classes menu page to explore all of our classes and search b",
+          "CTA: See all of our classes"
+        ],
+        "savedAssets": [
+          "img (503x386)"
+        ],
+        "cssMediaCount": 0
+      },
+      {
+        "index": "S7",
+        "name": "section-7",
+        "visualRefs": [
+          "referente-scroll-3.png"
+        ],
+        "heightPx": "570px",
+        "presenceVh": "63vh",
+        "widthRatio": "1.00",
+        "contentWidthPct": "100%",
+        "cBoxLeft": 0,
+        "verticalAirRatio": "0% aire",
+        "prevOverlapPx": 0,
+        "desktopLayout": "block",
+        "gap": "normal",
+        "desktopPadding": "0px 0px 0px 0px",
+        "bg": "inherit",
+        "bgImage": null,
+        "color": "rgb(0, 0, 0)",
+        "inventory": "1H, 1P, 1CTA, 2Media",
+        "textSamples": [
+          "H: Hire Our Venue",
+          "P: Our dramatic Georgian church in the centre of Bristol offers a beautiful venue f",
+          "CTA: Find out more"
+        ],
+        "savedAssets": [
+          "img (662x442)"
+        ],
+        "cssMediaCount": 0
+      },
+      {
+        "index": "S8",
+        "name": "section-8",
+        "visualRefs": [
+          "referente-scroll-4.png"
+        ],
+        "heightPx": "720px",
+        "presenceVh": "80vh",
+        "widthRatio": "1.00",
+        "contentWidthPct": "100%",
+        "cBoxLeft": 0,
+        "verticalAirRatio": "0% aire",
+        "prevOverlapPx": -64,
+        "desktopLayout": "block",
+        "gap": "normal",
+        "desktopPadding": "0px 0px 0px 0px",
+        "bg": "inherit",
+        "bgImage": null,
+        "color": "rgb(0, 0, 0)",
+        "inventory": "1H, 2P, 1CTA, 0Media",
+        "textSamples": [
+          "H: Youth Circus",
+          "P: Circomedia Youth Circus is one of the biggest in the UK with over 500 students. ",
+          "P: Led by our professional circus tutors, our after-school sessions offer a varied ",
+          "CTA: Watch the video now"
+        ]
+      },
+      {
+        "index": "S9",
+        "name": "section-9",
+        "visualRefs": [],
+        "heightPx": "409px",
+        "presenceVh": "45vh",
+        "widthRatio": "1.00",
+        "contentWidthPct": "100%",
+        "cBoxLeft": 0,
+        "verticalAirRatio": "0% aire",
+        "prevOverlapPx": 0,
+        "desktopLayout": "block",
+        "gap": "normal",
+        "desktopPadding": "0px 0px 0px 0px",
+        "bg": "inherit",
+        "bgImage": null,
+        "color": "rgb(0, 0, 0)",
+        "inventory": "4H, 0P, 2CTA, 0Media",
+        "textSamples": [
+          "H: BTEC",
+          "CTA: Find out more",
+          "H: Undergraduate Course",
+          "H: Diploma Course"
+        ],
+        "savedAssets": [
+          "css-bg (300x300)",
+          "css-bg (300x300)",
+          "css-bg (300x300)",
+          "css-bg (300x300)"
+        ],
+        "cssMediaCount": 4
+      },
+      {
+        "index": "S10",
+        "name": "section-10",
+        "visualRefs": [],
+        "heightPx": "228px",
+        "presenceVh": "25vh",
+        "widthRatio": "1.00",
+        "contentWidthPct": "100%",
+        "cBoxLeft": 0,
+        "verticalAirRatio": "0% aire",
+        "prevOverlapPx": 0,
+        "desktopLayout": "block",
+        "gap": "normal",
+        "desktopPadding": "0px 0px 0px 0px",
+        "bg": "inherit",
+        "bgImage": null,
+        "color": "rgb(0, 0, 0)",
+        "inventory": "0H, 0P, 0CTA, 6Media",
+        "textSamples": [],
+        "savedAssets": [
+          "img (315x100)",
+          "img (243x100)",
+          "img (99x100)"
+        ],
+        "cssMediaCount": 0
+      }
+    ],
+    "headerBlueprint": {
+      "heightPx": "124px",
+      "heightVh": "14vh",
+      "opticalHeightPx": "92px",
+      "rowCount": 2,
+      "heroRelation": "stacked",
+      "position": "relative",
+      "logoPositionFraction": null,
+      "logoAlignment": "unknown",
+      "spatialLayout": "[Nav] — [Espacio] — [Acciones]",
+      "hasAnnouncementRibbon": true,
+      "navType": "hybrid-nav",
+      "inlineLinksCount": 13,
+      "navLinksCount": 13,
+      "navLinks": [
+        "My Account",
+        "Checkout",
+        "Newsletter Signup",
+        "Donate",
+        "About",
+        "Academy",
+        "Youth Circus",
+        "Classes",
+        "What’s On",
+        "Venue Hire",
+        "Support Us",
+        "Supporting You",
+        "Jobs"
+      ],
+      "hasMenuButton": true,
+      "menuButtonLabel": "",
+      "actionStyle": "text-only",
+      "utilities": [
+        "My Account",
+        "Checkout",
+        "Newsletter Signup",
+        "Donate",
+        "Classes",
+        "What’s On",
+        "Venue Hire",
+        "Support Us",
+        "Supporting You",
+        "Jobs"
+      ]
+    },
+    "footerBlueprint": {
+      "heightPx": "342px",
+      "presenceVh": "38vh",
+      "contentWidthPct": "63%",
+      "bg": "rgb(29, 125, 80)",
+      "bgImage": null,
+      "color": "rgb(255, 255, 255)",
+      "maxFontPx": 28,
+      "prominentWords": [
+        "Instagram",
+        "TikTok",
+        "Facebook",
+        "YouTube",
+        "Vimeo",
+        "Donate"
+      ],
+      "columnHeadings": [],
+      "totalLinksCount": 10,
+      "links": [
+        "Instagram",
+        "Facebook",
+        "YouTube",
+        "Vimeo",
+        "About Us",
+        "Contact Us",
+        "Jobs",
+        "Terms and Conditions",
+        "Privacy Policy",
+        "Report a Safeguarding Issue"
+      ],
+      "hasNewsletter": false,
+      "hasLocaleSelector": false,
+      "ctaBanner": null,
+      "layoutArchetype": "split-bipartite",
+      "monumentalWordmark": null
+    }
+  },
+  "scrollDynamics": {
+    "strategy": "flujo-normal",
+    "navbarPhases": {
+      "strategy": "flujo-normal",
+      "hasThreePhases": false,
+      "phase1Top": {
+        "label": "Fase 1 (Reposo Y=0)",
+        "height": "132px",
+        "position": "relative",
+        "bg": "rgb(29, 125, 80)",
+        "backdrop": "none",
+        "borderBottom": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "surfaceWidth": "1440px",
+        "isContained": false,
+        "heroRelation": "stacked"
+      },
+      "phase2Down": {
+        "label": "Fase 2 (Scroll Descendente)",
+        "strategy": "flujo-normal",
+        "height": "124px",
+        "bg": "rgb(29, 125, 80)",
+        "backdrop": "none",
+        "borderBottom": "0px none rgb(255, 255, 255)",
+        "borderRadius": "0px",
+        "surfaceWidth": "1440px",
+        "isContained": false,
+        "isHidden": false,
+        "isCompact": true
+      },
+      "phase3Up": {
+        "label": "Fase 3 (Scroll Ascendente / Retorno)",
+        "isRevealed": false,
+        "behavior": "reaparece-flotante",
+        "restoreAtTop": "restaura-fase-1-en-y0"
+      }
+    },
+    "state0": {
+      "scrollY": 0,
+      "top": 0,
+      "bottom": 124,
+      "height": 132,
+      "rawHeight": 124,
+      "translateY": 0,
+      "transform": "none",
+      "opacity": "1",
+      "position": "relative",
+      "bg": "rgb(29, 125, 80)",
+      "backdrop": "none",
+      "borderBottom": "0px none rgb(255, 255, 255)",
+      "boxShadow": "none",
+      "borderRadius": "0px",
+      "surfaceWidth": 1440,
+      "isContainedSurface": false
+    },
+    "stateDown": {
+      "scrollY": 4806,
+      "top": -4806,
+      "bottom": -4682,
+      "height": 124,
+      "rawHeight": 124,
+      "translateY": 0,
+      "transform": "none",
+      "opacity": "1",
+      "position": "relative",
+      "bg": "rgb(29, 125, 80)",
+      "backdrop": "none",
+      "borderBottom": "0px none rgb(255, 255, 255)",
+      "boxShadow": "none",
+      "borderRadius": "0px",
+      "surfaceWidth": 1440,
+      "isContainedSurface": false
+    },
+    "stateUp": {
+      "scrollY": 4206,
+      "top": -4206,
+      "bottom": -4082,
+      "height": 124,
+      "rawHeight": 124,
+      "translateY": 0,
+      "transform": "none",
+      "opacity": "1",
+      "position": "relative",
+      "bg": "rgb(29, 125, 80)",
+      "backdrop": "none",
+      "borderBottom": "0px none rgb(255, 255, 255)",
+      "boxShadow": "none",
+      "borderRadius": "0px",
+      "surfaceWidth": 1440,
+      "isContainedSurface": false
+    },
+    "scrollMotionDetails": {
+      "gsapTriggers": [],
+      "activeTransforms": [
+        {
+          "element": "div.block card wow fadeInUp animated",
+          "transform": "matrix(1, 0, 0, 1, 0, 0.0715923)",
+          "clipPath": null,
+          "willChange": null
+        },
+        {
+          "element": "img.the-logos--single-logo wow fadeInUp animated lazyloaded",
+          "transform": "matrix(1, 0, 0, 1, 0, 0.101536)",
+          "clipPath": null,
+          "willChange": null
+        }
+      ],
+      "hasLenis": false,
+      "hasParallaxImages": true,
+      "motionAnalysis": {
+        "detectedParallax": [],
+        "detectedPins": [],
+        "hasBundledGsap": false,
+        "hasBundledLenis": false,
+        "hasInnerScrollContainer": false
+      },
+      "scrollReveal": {
+        "detected": true,
+        "revealedCount": 44,
+        "revealedSections": [
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6",
+          "S7",
+          "S8",
+          "S9",
+          "S10"
+        ],
+        "sampleTag": "h5",
+        "sampleClass": "card--text",
+        "timingFunction": "scrub/spring",
+        "duration": "js-driven",
+        "samples": [
+          "H: STUDY WITH US",
+          "CTA: Find out more",
+          "H: WHAT'S ON",
+          "H: CLASSES",
+          "H: YOUTH CIRCUS"
+        ]
+      },
+      "revealTransitions": [],
+      "classMutations": [
+        {
+          "selector": "main.main-content.is-open",
+          "secIdx": null,
+          "addedClasses": [
+            "is-open"
+          ],
+          "removedClasses": [],
+          "attrs": {}
+        },
+        {
+          "selector": "img.lazyloading",
+          "secIdx": "S5",
+          "addedClasses": [
+            "lazyloaded"
+          ],
+          "removedClasses": [
+            "lazyload"
+          ],
+          "attrs": {}
+        },
+        {
+          "selector": "img.lazyloading",
+          "secIdx": "S6",
+          "addedClasses": [
+            "lazyloaded"
+          ],
+          "removedClasses": [
+            "lazyload"
+          ],
+          "attrs": {}
+        },
+        {
+          "selector": "img.lazyloading",
+          "secIdx": "S7",
+          "addedClasses": [
+            "lazyloaded"
+          ],
+          "removedClasses": [
+            "lazyload"
+          ],
+          "attrs": {}
+        },
+        {
+          "selector": "iframe.lazyloading",
+          "secIdx": "S8",
+          "addedClasses": [
+            "lazyloaded"
+          ],
+          "removedClasses": [
+            "lazyload"
+          ],
+          "attrs": {}
+        },
+        {
+          "selector": "div.card--image.lazyloading",
+          "secIdx": "S9",
+          "addedClasses": [
+            "lazyloaded"
+          ],
+          "removedClasses": [
+            "lazyload"
+          ],
+          "attrs": {}
+        },
+        {
+          "selector": "div.card--image.lazyloading",
+          "secIdx": "S9",
+          "addedClasses": [
+            "lazyloaded"
+          ],
+          "removedClasses": [
+            "lazyload"
+          ],
+          "attrs": {}
+        },
+        {
+          "selector": "div.card--image.lazyloading",
+          "secIdx": "S9",
+          "addedClasses": [
+            "lazyloaded"
+          ],
+          "removedClasses": [
+            "lazyload"
+          ],
+          "attrs": {}
+        },
+        {
+          "selector": "div.card--image.lazyloading",
+          "secIdx": "S9",
+          "addedClasses": [
+            "lazyloaded"
+          ],
+          "removedClasses": [
+            "lazyload"
+          ],
+          "attrs": {}
+        },
+        {
+          "selector": "img.the-logos--single-logo.wow",
+          "secIdx": "S10",
+          "addedClasses": [
+            "lazyloaded"
+          ],
+          "removedClasses": [
+            "lazyload"
+          ],
+          "attrs": {}
+        },
+        {
+          "selector": "img.the-logos--single-logo.wow",
+          "secIdx": "S10",
+          "addedClasses": [
+            "lazyloaded"
+          ],
+          "removedClasses": [
+            "lazyload"
+          ],
+          "attrs": {}
+        },
+        {
+          "selector": "img.the-logos--single-logo.wow",
+          "secIdx": "S10",
+          "addedClasses": [
+            "lazyloaded"
+          ],
+          "removedClasses": [
+            "lazyload"
+          ],
+          "attrs": {}
+        }
+      ]
+    },
+    "waapiAnimations": [
+      {
+        "selector": "div.block card wow fadeInUp animated",
+        "duration": "500ms",
+        "delay": "1100ms",
+        "easing": "linear",
+        "playState": "running"
+      },
+      {
+        "selector": "img.the-logos--single-logo wow fadeInUp animated lazyloaded",
+        "duration": "500ms",
+        "delay": "900ms",
+        "easing": "linear",
+        "playState": "running"
+      }
+    ],
+    "capturedScrollFiles": [
+      "referente-scroll.png",
+      "referente-scroll-2.png",
+      "referente-scroll-3.png",
+      "referente-scroll-4.png"
+    ],
+    "capturedScrollFrames": [
+      {
+        "file": "referente-scroll.png",
+        "scrollY": 900,
+        "sections": [
+          "S2",
+          "S3"
+        ]
+      },
+      {
+        "file": "referente-scroll-2.png",
+        "scrollY": 1800,
+        "sections": [
+          "S4",
+          "S5"
+        ]
+      },
+      {
+        "file": "referente-scroll-3.png",
+        "scrollY": 2700,
+        "sections": [
+          "S6",
+          "S7"
+        ]
+      },
+      {
+        "file": "referente-scroll-4.png",
+        "scrollY": 3600,
+        "sections": [
+          "S8"
+        ]
+      }
+    ]
+  },
+  "interactiveStates": {
+    "enabled": false,
+    "interactions": []
+  },
+  "drawerData": {
+    "detected": false,
+    "scrollLock": false,
+    "compensatesScrollbarJerk": false,
+    "drawerSpec": null
+  },
+  "mobileTopology": {
+    "mobileH1Size": "N/A",
+    "sectionDiffs": [
+      {
+        "index": "S1",
+        "mobileLayout": "inline-block",
+        "mobilePadding": "0px 0px",
+        "mobileGap": "0px"
+      },
+      {
+        "index": "S2",
+        "mobileLayout": "block",
+        "mobilePadding": "0px 0px",
+        "mobileGap": "0px"
+      },
+      {
+        "index": "S3",
+        "mobileLayout": "block",
+        "mobilePadding": "60px 0px",
+        "mobileGap": "0px"
+      }
+    ]
+  },
+  "mergedBlueprint": [
+    {
+      "index": "S1",
+      "name": "post-5586",
+      "visualRefs": [
+        "referente-desktop.png"
+      ],
+      "heightPx": "720px",
+      "presenceVh": "80vh",
+      "widthRatio": "0.43",
+      "contentWidthPct": "43%",
+      "cBoxLeft": 58,
+      "verticalAirRatio": "92% aire",
+      "prevOverlapPx": 0,
+      "desktopLayout": "inline-block",
+      "gap": "normal",
+      "desktopPadding": "0px 0px 0px 0px",
+      "bg": "inherit",
+      "bgImage": null,
+      "color": "rgb(0, 0, 0)",
+      "inventory": "1H, 0P, 0CTA, 0Media",
+      "textSamples": [
+        "H: CIRCUS FOR EVERYONE"
+      ],
+      "mobileLayout": "inline-block",
+      "mobilePadding": "0px 0px"
+    },
+    {
+      "index": "S2",
+      "name": "section-2",
+      "visualRefs": [
+        "referente-scroll.png"
+      ],
+      "heightPx": "523px",
+      "presenceVh": "58vh",
+      "widthRatio": "1.00",
+      "contentWidthPct": "100%",
+      "cBoxLeft": 0,
+      "verticalAirRatio": "0% aire",
+      "prevOverlapPx": 0,
+      "desktopLayout": "block",
+      "gap": "normal",
+      "desktopPadding": "0px 0px 0px 0px",
+      "bg": "inherit",
+      "bgImage": null,
+      "color": "rgb(0, 0, 0)",
+      "inventory": "3H, 0P, 2CTA, 0Media",
+      "textSamples": [
+        "H: STUDY WITH US",
+        "CTA: Find out more",
+        "H: WHAT'S ON",
+        "H: CLASSES"
+      ],
+      "savedAssets": [
+        "css-bg (414x414)",
+        "css-bg (414x414)",
+        "css-bg (414x414)"
+      ],
+      "cssMediaCount": 3,
+      "mobileLayout": "block",
+      "mobilePadding": "0px 0px"
+    },
+    {
+      "index": "S3",
+      "name": "section-3",
+      "visualRefs": [
+        "referente-scroll.png"
+      ],
+      "heightPx": "523px",
+      "presenceVh": "58vh",
+      "widthRatio": "1.00",
+      "contentWidthPct": "100%",
+      "cBoxLeft": 0,
+      "verticalAirRatio": "0% aire",
+      "prevOverlapPx": 0,
+      "desktopLayout": "block",
+      "gap": "normal",
+      "desktopPadding": "0px 0px 0px 0px",
+      "bg": "inherit",
+      "bgImage": null,
+      "color": "rgb(0, 0, 0)",
+      "inventory": "3H, 0P, 2CTA, 0Media",
+      "textSamples": [
+        "H: YOUTH CIRCUS",
+        "H: PRIVATE HIRE",
+        "H: WEDDINGS",
+        "CTA: Find out more"
+      ],
+      "savedAssets": [
+        "css-bg (414x414)",
+        "css-bg (414x414)",
+        "css-bg (414x414)"
+      ],
+      "cssMediaCount": 3,
+      "mobileLayout": "block",
+      "mobilePadding": "60px 0px"
+    },
+    {
+      "index": "S4",
+      "name": "section-4",
+      "visualRefs": [
+        "referente-scroll-2.png"
+      ],
+      "heightPx": "432px",
+      "presenceVh": "48vh",
+      "widthRatio": "1.00",
+      "contentWidthPct": "100%",
+      "cBoxLeft": 0,
+      "verticalAirRatio": "0% aire",
+      "prevOverlapPx": 0,
+      "desktopLayout": "block",
+      "gap": "normal",
+      "desktopPadding": "0px 0px 0px 0px",
+      "bg": "inherit",
+      "bgImage": null,
+      "color": "rgb(0, 0, 0)",
+      "inventory": "1H, 4P, 0CTA, 0Media",
+      "textSamples": [
+        "H: About us",
+        "P: Founded in 1984, Circomedia is a world-renowned centre for contemporary circus a",
+        "P: Our BTEC, Degree and Diploma courses combine technical and physical training wit",
+        "P: We curate a fascinating and innovative performance programme from our venue in t",
+        "P: Our adult classes cover a range of aerial and acrobatic disciplines and are desi"
+      ],
+      "mobileLayout": "flex-column",
+      "mobilePadding": "N/A"
+    },
+    {
+      "index": "S5",
+      "name": "section-5",
+      "visualRefs": [
+        "referente-scroll-2.png"
+      ],
+      "heightPx": "536px",
+      "presenceVh": "60vh",
+      "widthRatio": "1.00",
+      "contentWidthPct": "100%",
+      "cBoxLeft": 0,
+      "verticalAirRatio": "0% aire",
+      "prevOverlapPx": 0,
+      "desktopLayout": "block",
+      "gap": "normal",
+      "desktopPadding": "0px 0px 0px 0px",
+      "bg": "inherit",
+      "bgImage": null,
+      "color": "rgb(0, 0, 0)",
+      "inventory": "1H, 3P, 2CTA, 2Media",
+      "textSamples": [
+        "H: Introducing Our Academy",
+        "P: Circomedia Academy is a place to train, create and grow as a contemporary circus",
+        "P: City of Bristol College",
+        "P: Northern School of Contemporary Dance",
+        "CTA: Find out more"
+      ],
+      "savedAssets": [
+        "img (397x408)"
+      ],
+      "cssMediaCount": 0,
+      "mobileLayout": "flex-column",
+      "mobilePadding": "N/A"
+    },
+    {
+      "index": "S6",
+      "name": "section-6",
+      "visualRefs": [
+        "referente-scroll-3.png"
+      ],
+      "heightPx": "514px",
+      "presenceVh": "57vh",
+      "widthRatio": "1.00",
+      "contentWidthPct": "100%",
+      "cBoxLeft": 0,
+      "verticalAirRatio": "0% aire",
+      "prevOverlapPx": 0,
+      "desktopLayout": "block",
+      "gap": "normal",
+      "desktopPadding": "0px 0px 0px 0px",
+      "bg": "inherit",
+      "bgImage": null,
+      "color": "rgb(0, 0, 0)",
+      "inventory": "1H, 2P, 1CTA, 2Media",
+      "textSamples": [
+        "H: Adult Classes",
+        "P: From complete beginners taking their first tentative steps into aerial, to those",
+        "P: Why not use our new classes menu page to explore all of our classes and search b",
+        "CTA: See all of our classes"
+      ],
+      "savedAssets": [
+        "img (503x386)"
+      ],
+      "cssMediaCount": 0,
+      "mobileLayout": "flex-column",
+      "mobilePadding": "N/A"
+    },
+    {
+      "index": "S7",
+      "name": "section-7",
+      "visualRefs": [
+        "referente-scroll-3.png"
+      ],
+      "heightPx": "570px",
+      "presenceVh": "63vh",
+      "widthRatio": "1.00",
+      "contentWidthPct": "100%",
+      "cBoxLeft": 0,
+      "verticalAirRatio": "0% aire",
+      "prevOverlapPx": 0,
+      "desktopLayout": "block",
+      "gap": "normal",
+      "desktopPadding": "0px 0px 0px 0px",
+      "bg": "inherit",
+      "bgImage": null,
+      "color": "rgb(0, 0, 0)",
+      "inventory": "1H, 1P, 1CTA, 2Media",
+      "textSamples": [
+        "H: Hire Our Venue",
+        "P: Our dramatic Georgian church in the centre of Bristol offers a beautiful venue f",
+        "CTA: Find out more"
+      ],
+      "savedAssets": [
+        "img (662x442)"
+      ],
+      "cssMediaCount": 0,
+      "mobileLayout": "flex-column",
+      "mobilePadding": "N/A"
+    },
+    {
+      "index": "S8",
+      "name": "section-8",
+      "visualRefs": [
+        "referente-scroll-4.png"
+      ],
+      "heightPx": "720px",
+      "presenceVh": "80vh",
+      "widthRatio": "1.00",
+      "contentWidthPct": "100%",
+      "cBoxLeft": 0,
+      "verticalAirRatio": "0% aire",
+      "prevOverlapPx": -64,
+      "desktopLayout": "block",
+      "gap": "normal",
+      "desktopPadding": "0px 0px 0px 0px",
+      "bg": "inherit",
+      "bgImage": null,
+      "color": "rgb(0, 0, 0)",
+      "inventory": "1H, 2P, 1CTA, 0Media",
+      "textSamples": [
+        "H: Youth Circus",
+        "P: Circomedia Youth Circus is one of the biggest in the UK with over 500 students. ",
+        "P: Led by our professional circus tutors, our after-school sessions offer a varied ",
+        "CTA: Watch the video now"
+      ],
+      "mobileLayout": "flex-column",
+      "mobilePadding": "N/A"
+    },
+    {
+      "index": "S9",
+      "name": "section-9",
+      "visualRefs": [],
+      "heightPx": "409px",
+      "presenceVh": "45vh",
+      "widthRatio": "1.00",
+      "contentWidthPct": "100%",
+      "cBoxLeft": 0,
+      "verticalAirRatio": "0% aire",
+      "prevOverlapPx": 0,
+      "desktopLayout": "block",
+      "gap": "normal",
+      "desktopPadding": "0px 0px 0px 0px",
+      "bg": "inherit",
+      "bgImage": null,
+      "color": "rgb(0, 0, 0)",
+      "inventory": "4H, 0P, 2CTA, 0Media",
+      "textSamples": [
+        "H: BTEC",
+        "CTA: Find out more",
+        "H: Undergraduate Course",
+        "H: Diploma Course"
+      ],
+      "savedAssets": [
+        "css-bg (300x300)",
+        "css-bg (300x300)",
+        "css-bg (300x300)",
+        "css-bg (300x300)"
+      ],
+      "cssMediaCount": 4,
+      "mobileLayout": "flex-column",
+      "mobilePadding": "N/A"
+    },
+    {
+      "index": "S10",
+      "name": "section-10",
+      "visualRefs": [],
+      "heightPx": "228px",
+      "presenceVh": "25vh",
+      "widthRatio": "1.00",
+      "contentWidthPct": "100%",
+      "cBoxLeft": 0,
+      "verticalAirRatio": "0% aire",
+      "prevOverlapPx": 0,
+      "desktopLayout": "block",
+      "gap": "normal",
+      "desktopPadding": "0px 0px 0px 0px",
+      "bg": "inherit",
+      "bgImage": null,
+      "color": "rgb(0, 0, 0)",
+      "inventory": "0H, 0P, 0CTA, 6Media",
+      "textSamples": [],
+      "savedAssets": [
+        "img (315x100)",
+        "img (243x100)",
+        "img (99x100)"
+      ],
+      "cssMediaCount": 0,
+      "mobileLayout": "flex-column",
+      "mobilePadding": "N/A"
+    }
+  ],
+  "kineticNetwork": {
+    "hasCssTransitionAll": true,
+    "curves": [
+      "cubic-bezier(.645,.045,.355,1)",
+      "cubic-bezier(.165,.84,.44,1)",
+      "cubic-bezier(.895,.03,.685,.22)",
+      "cubic-bezier(.55,.055,.675,.19)",
+      "cubic-bezier(.33333,.66667,.66667,1)",
+      "cubic-bezier(.215,.61,.355,1)",
+      "cubic-bezier(.33333,0,.66667,.33333)",
+      "cubic-bezier(.68,-.55,.265,1.55)",
+      "cubic-bezier(.6,.04,.98,.335)",
+      "cubic-bezier(.075,.82,.165,1)",
+      "cubic-bezier(.19,1,.22,1)"
+    ],
+    "durations": [
+      {
+        "duration": "50ms",
+        "count": 8
+      },
+      {
+        "duration": "75ms",
+        "count": 35
+      },
+      {
+        "duration": "80ms",
+        "count": 5
+      },
+      {
+        "duration": "100ms",
+        "count": 62
+      },
+      {
+        "duration": "120ms",
+        "count": 10
+      },
+      {
+        "duration": "125ms",
+        "count": 28
+      },
+      {
+        "duration": "130ms",
+        "count": 14
+      },
+      {
+        "duration": "150ms",
+        "count": 26
+      },
+      {
+        "duration": "160ms",
+        "count": 2
+      },
+      {
+        "duration": "175ms",
+        "count": 10
+      },
+      {
+        "duration": "200ms",
+        "count": 19
+      },
+      {
+        "duration": "220ms",
+        "count": 12
+      },
+      {
+        "duration": "230ms",
+        "count": 7
+      },
+      {
+        "duration": "250ms",
+        "count": 6
+      },
+      {
+        "duration": "275ms",
+        "count": 6
+      },
+      {
+        "duration": "300ms",
+        "count": 6
+      },
+      {
+        "duration": "350ms",
+        "count": 3
+      },
+      {
+        "duration": "400ms",
+        "count": 3
+      },
+      {
+        "duration": "500ms",
+        "count": 14
+      },
+      {
+        "duration": "600ms",
+        "count": 1
+      },
+      {
+        "duration": "1000ms",
+        "count": 1
+      }
+    ],
+    "fontsWoff2": [
+      "https://fonts.gstatic.com/s/roboto/v51/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2",
+      "https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcviYwYZ8UA3.woff2"
+    ]
+  },
+  "performanceRecipes": [
+    {
+      "target": "Animación de Entrada (Scroll-Reveal)",
+      "legacyPattern": "Reveal detectado en 44 elementos en S2, S3, S4, S5, S6, S7, S8, S9, S10 (js-driven, scrub/spring).",
+      "forjaDirectiva": "Usar `whileInView` / `IntersectionObserver` (`once: true, amount: 0.2`) en S2, S3, S4, S5, S6, S7, S8, S9, S10 (js-driven scrub/spring). Hero S1 nace en `opacity: 1` y nunca dejar secciones en `opacity: 0` sin fallback SSR/hidratación ni `prefers-reduced-motion`."
+    },
+    {
+      "target": "Transiciones Quirúrgicas (Antipatrón transition: all)",
+      "legacyPattern": "Se detectaron reglas activas con `transition: all` en hojas de estilo o nodos interactivos.",
+      "forjaDirectiva": "Veto estricto a `transition: all`. Declarar propiedades explícitas (`transition: transform 160ms var(--ease-out), opacity 200ms ease`) y feedback táctil `active:scale-[0.97]`."
+    },
+    {
+      "target": "Carga Tipográfica Cero-CLS",
+      "legacyPattern": "2 archivos WOFF2 interceptados por red en runtime.",
+      "forjaDirectiva": "Servir WOFF2 en `/public/fonts/`, vía `next/font` o `@fontsource` / `<link>` con `display: swap` y ajuste de métricas para garantizar CLS = 0."
+    }
+  ],
+  "cdpActiveAnimations": [
+    {
+      "name": "fadeInUp",
+      "duration": 0,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 0,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 0,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 0,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 0,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 0,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 0,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 0,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 0,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 0,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 0,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 0,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 0,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 0,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 0,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 0,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 0,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 0,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 0,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 0,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 0,
+      "easing": "linear"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "opacity",
+      "duration": 400,
+      "easing": "ease"
+    },
+    {
+      "name": "opacity",
+      "duration": 400,
+      "easing": "ease"
+    },
+    {
+      "name": "opacity",
+      "duration": 400,
+      "easing": "ease"
+    },
+    {
+      "name": "opacity",
+      "duration": 400,
+      "easing": "ease"
+    },
+    {
+      "name": "opacity",
+      "duration": 400,
+      "easing": "ease"
+    },
+    {
+      "name": "opacity",
+      "duration": 400,
+      "easing": "ease"
+    },
+    {
+      "name": "opacity",
+      "duration": 400,
+      "easing": "ease"
+    },
+    {
+      "name": "opacity",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "opacity",
+      "duration": 255.8140697880335,
+      "easing": "ease"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 500,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 500,
+      "easing": "linear"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 500,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 500,
+      "easing": "linear"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 500,
+      "easing": "linear"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 500,
+      "easing": "linear"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 500,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 500,
+      "easing": "linear"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 500,
+      "easing": "linear"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 500,
+      "easing": "linear"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 500,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 500,
+      "easing": "linear"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 500,
+      "easing": "linear"
+    },
+    {
+      "name": "opacity",
+      "duration": 400,
+      "easing": "ease"
+    },
+    {
+      "name": "opacity",
+      "duration": 400,
+      "easing": "ease"
+    },
+    {
+      "name": "opacity",
+      "duration": 400,
+      "easing": "ease"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 500,
+      "easing": "linear"
+    },
+    {
+      "name": "opacity",
+      "duration": 400,
+      "easing": "ease"
+    },
+    {
+      "name": "opacity",
+      "duration": 400,
+      "easing": "ease"
+    },
+    {
+      "name": "opacity",
+      "duration": 400,
+      "easing": "ease"
+    },
+    {
+      "name": "opacity",
+      "duration": 400,
+      "easing": "ease"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 500,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 500,
+      "easing": "linear"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "visibility",
+      "duration": 300,
+      "easing": "ease"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 500,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 500,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 500,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 500,
+      "easing": "linear"
+    },
+    {
+      "name": "fadeInUp",
+      "duration": 500,
+      "easing": "linear"
+    }
+  ],
+  "waapiActiveAnimations": [
+    {
+      "selector": "div.block card wow fadeInUp animated",
+      "duration": "500ms",
+      "delay": "1100ms",
+      "easing": "linear",
+      "playState": "running"
+    },
+    {
+      "selector": "img.the-logos--single-logo wow fadeInUp animated lazyloaded",
+      "duration": "500ms",
+      "delay": "900ms",
+      "easing": "linear",
+      "playState": "running"
+    }
+  ],
+  "internalPagesData": [
+    {
+      "url": "https://www.circomedia.com/introducing-our-academy/",
+      "slug": "introducing-our-academy",
+      "screenshot": "referente-introducing-our-academy.png",
+      "display": "block",
+      "gridCols": "N/A",
+      "h1Size": "42px"
+    },
+    {
+      "url": "https://www.circomedia.com/the-btec-course/",
+      "slug": "the-btec-course",
+      "screenshot": "referente-the-btec-course.png",
+      "display": "block",
+      "gridCols": "N/A",
+      "h1Size": "N/A"
+    },
+    {
+      "url": "https://www.circomedia.com/ba-hons-contemporary-circus-with-physical-theatre/",
+      "slug": "ba-hons-contemporary-circus-with-physical-theatre",
+      "screenshot": "referente-ba-hons-contemporary-circus-with-physical-theatre.png",
+      "display": "block",
+      "gridCols": "N/A",
+      "h1Size": "N/A"
+    }
+  ]
+}

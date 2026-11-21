@@ -1,0 +1,50 @@
+@import "tailwindcss" source("../");
+
+/* ============================================================
+   FORJA CHASIS MÍNIMO PURO (Piso Higiénico No Limitante)
+   ============================================================ */
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  overflow-x: clip;
+  max-width: 100vw;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  overflow-x: clip;
+  max-width: 100vw;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer base {
+  input,
+  select,
+  textarea {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  select,
+  textarea,
+  input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]):not([type="file"]):not([type="hidden"]) {
+    width: 100%;
+  }
+}
+
+/* Honeypot accesible fuera de viewport (Seguridad contra bots) */
+.hp-trap {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+}

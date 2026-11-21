@@ -1,0 +1,69 @@
+{
+  "slug": "aerea-circo",
+  "targetUrl": "https://www.circomedia.com/",
+  "type": "MULTI_PAGE",
+  "navModel": "hybrid-nav",
+  "routes": [
+    "/",
+    "/la-escuela",
+    "/disciplinas",
+    "/formacion",
+    "/compania",
+    "/espectaculos",
+    "/contacto"
+  ],
+  "operatorOverrides": [],
+  "geometry": {
+    "containerMaxWidth": {
+      "value": 1324,
+      "unit": "px",
+      "tolerance": 66,
+      "source": "recon",
+      "status": "verificable"
+    },
+    "headerHeightResting": {
+      "value": 124,
+      "unit": "px",
+      "tolerance": 12,
+      "source": "recon",
+      "status": "verificable"
+    },
+    "headerHeightScrolled": {
+      "value": 124,
+      "unit": "px",
+      "tolerance": 12,
+      "source": "recon",
+      "status": "verificable"
+    },
+    "headerHeroRelation": {
+      "value": "stacked",
+      "source": "recon",
+      "status": "verificable"
+    },
+    "headerBgResting": {
+      "value": "rgb(29, 125, 80)",
+      "source": "recon",
+      "status": "verificable"
+    },
+    "headerNavType": {
+      "value": "hybrid-nav",
+      "source": "recon",
+      "status": "verificable"
+    },
+    "headerActionStyle": {
+      "value": "text-only",
+      "source": "recon",
+      "status": "verificable"
+    },
+    "headerStrategy": {
+      "value": "flujo-normal",
+      "source": "recon",
+      "status": "verificable"
+    },
+    "masterPadding": {
+      "value": "4%",
+      "source": "recon",
+      "status": "verificable"
+    }
+  }
+}

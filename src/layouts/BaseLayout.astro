@@ -1,0 +1,194 @@
+---
+import rawSiteData from '@/content/site.json';
+import '@/styles/tokens.css';
+import '@/styles/theme.css';
+import '@/styles/globals.css';
+import '@/styles/motion.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+interface SiteConfig {
+  brand?: {
+    name?: string;
+    tagline?: string;
+    description?: string;
+    url?: string;
+    schemaType?: string;
+  };
+  contact?: {
+    phone?: string;
+    address?: string;
+    city?: string;
+    email?: string;
+  };
+  seo?: {
+    title?: string;
+    description?: string;
+  };
+}
+
+const site = rawSiteData as SiteConfig;
+const brandName = site.brand?.name || 'Sitio Oficial';
+const brandTagline = site.brand?.tagline || '';
+const defaultTitle =
+  site.seo?.title || (brandTagline ? `${brandName} | ${brandTagline}` : brandName);
+const defaultDescription =
+  site.seo?.description ||
+  site.brand?.description ||
+  brandTagline ||
+  'Sitio web oficial.';
+
+const { title = defaultTitle, description = defaultDescription } = Astro.props;
+
+const baseUrl = (
+  import.meta.env.PUBLIC_SITE_URL ||
+  site.brand?.url ||
+  Astro.url.origin
+).replace(/\/$/, '');
+const canonicalUrl = new URL(Astro.url.pathname || '/', baseUrl).href;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': site.brand?.schemaType || 'ProfessionalService',
+  name: brandName,
+  description,
+  url: baseUrl,
+  telephone: site.contact?.phone || '+56 9 1234 5678',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: site.contact?.address || 'Santiago, Chile',
+    addressLocality: site.contact?.city || 'Santiago',
+    addressCountry: 'CL',
+  },
+};
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="/favicon.ico" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:site_name" content={brandName} />
+    <meta property="og:locale" content="es_CL" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(jsonLd).replace(/</g, '\\u003c')}
+    />
+  </head>
+  <body>
+    <slot />
+    <script>
+      function initForjaMotion() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        const rawFactor = getComputedStyle(document.documentElement)
+          .getPropertyValue('--motion-factor')
+          .trim();
+        const factor = rawFactor === '' ? 0.35 : Number.parseFloat(rawFactor);
+        if (!Number.isFinite(factor) || factor <= 0) return;
+
+        const revealNodes = Array.from(
+          document.querySelectorAll<HTMLElement>('[data-forja-reveal], [data-reveal], .shutter')
+        ).filter((el) => el.dataset.forjaObserved !== '1');
+        if (revealNodes.length === 0 || !('IntersectionObserver' in window)) return;
+
+        const structuralTags = new Set(['SECTION', 'HEADER', 'FOOTER']);
+        const viewportH = window.innerHeight;
+        const pendingNodes: HTMLElement[] = [];
+
+        document.documentElement.classList.remove('forja-motion-ready');
+
+        for (const el of revealNodes) {
+          el.dataset.forjaObserved = '1';
+          const rect = el.getBoundingClientRect();
+          const isRevealAttr = el.hasAttribute('data-forja-reveal');
+
+          if (rect.top < viewportH || (isRevealAttr && structuralTags.has(el.tagName))) {
+            if (isRevealAttr) el.setAttribute('data-forja-reveal', 'done');
+            el.classList.add('is-in');
+            continue;
+          }
+
+          if (isRevealAttr) {
+            el.setAttribute('data-forja-reveal', 'pending');
+          }
+          pendingNodes.push(el);
+        }
+
+        if (pendingNodes.length === 0) return;
+
+        // Flush sincronizado antes de habilitar transiciones para evitar flash/carrera
+        void document.documentElement.offsetHeight;
+        document.documentElement.classList.add('forja-motion-ready');
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            const entering = entries.filter((entry) => entry.isIntersecting);
+            if (entering.length === 0) return;
+
+            entering.forEach((entry, idx) => {
+              const el = entry.target as HTMLElement;
+              observer.unobserve(el);
+
+              if (el.hasAttribute('data-forja-reveal')) {
+                const explicitDelay = el.dataset.forjaDelay
+                  ? Number.parseInt(el.dataset.forjaDelay, 10) || 0
+                  : null;
+                const delay = explicitDelay !== null ? explicitDelay : Math.min(idx * 65, 260);
+                if (delay > 0) {
+                  el.style.setProperty('--forja-reveal-delay', `${delay}ms`);
+                }
+                el.setAttribute('data-forja-reveal', 'in');
+                el.classList.add('is-in');
+
+                let finished = false;
+                const finalize = () => {
+                  if (finished) return;
+                  finished = true;
+                  el.setAttribute('data-forja-reveal', 'done');
+                  el.style.removeProperty('--forja-reveal-delay');
+                };
+                el.addEventListener(
+                  'transitionend',
+                  (ev) => {
+                    if (ev.target === el && ev.propertyName === 'opacity') finalize();
+                  },
+                  { once: true }
+                );
+                window.setTimeout(finalize, 850 + delay);
+              } else {
+                el.classList.add('is-in');
+              }
+            });
+          },
+          { rootMargin: '0px 0px -4% 0px', threshold: 0 }
+        );
+
+        for (const el of pendingNodes) {
+          observer.observe(el);
+        }
+      }
+
+      initForjaMotion();
+      document.addEventListener('astro:page-load', initForjaMotion);
+    </script>
+  </body>
+</html>

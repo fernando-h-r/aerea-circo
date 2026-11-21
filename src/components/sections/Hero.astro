@@ -1,0 +1,120 @@
+---
+import site from '@/content/site.json';
+
+interface Props {
+  title?: string;
+  image?: string;
+  imageAlt?: string;
+}
+
+const {
+  title = site.hero.headline,
+  image = site.hero.image,
+  imageAlt = site.hero.imageAlt,
+} = Astro.props;
+---
+
+<section class="hero-stage" aria-label="Presentación principal">
+  <div class="hero-stage__media" aria-hidden="true">
+    <img
+      src={image}
+      alt={imageAlt}
+      width="1600"
+      height="900"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="hero-stage__img"
+    />
+    <div class="hero-stage__scrim"></div>
+  </div>
+
+  <div class="hero-stage__content">
+    <h1 class="hero-stage__title">{title}</h1>
+  </div>
+</section>
+
+<style>
+  .hero-stage {
+    position: relative;
+    width: 100%;
+    height: var(--s1-height, 720px);
+    min-height: 520px;
+    background-color: var(--color-surface-deep);
+    overflow: hidden;
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-stage__media {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-stage__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 62% 38%;
+    display: block;
+  }
+
+  .hero-stage__scrim {
+    position: absolute;
+    inset: 0;
+    background: var(--hero-scrim-desktop);
+  }
+
+  .hero-stage__content {
+    position: relative;
+    z-index: 2;
+    width: min(43%, 580px);
+    margin-left: 4%;
+    padding-top: 216px;
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-stage__title {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(2.25rem, 3.8vw, 3.4375rem);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: var(--color-accent-contrast);
+    text-wrap: balance;
+  }
+
+  @media (max-width: 1024px) {
+    .hero-stage {
+      height: 580px;
+    }
+
+    .hero-stage__content {
+      width: min(62%, 520px);
+      padding-top: 170px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .hero-stage {
+      height: 520px;
+      min-height: 460px;
+    }
+
+    .hero-stage__scrim {
+      background: var(--hero-scrim-mobile);
+    }
+
+    .hero-stage__content {
+      width: auto;
+      max-width: calc(100% - 2rem);
+      margin-left: 1rem;
+      margin-right: 1rem;
+      padding-top: 210px;
+    }
+  }
+</style>

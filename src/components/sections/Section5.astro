@@ -1,0 +1,193 @@
+---
+---
+
+<section id="formacion-destacada" class="section-academy" aria-labelledby="formacion-destacada-titulo">
+  <div class="forja-container">
+    <div class="academy-frame" data-forja-reveal>
+      <div class="academy-grid">
+        <div class="academy-media-stack">
+          <img
+            src="/images/fijm-2013-014.webp"
+            alt="Estudiante de circo contemporáneo en tela aérea durante práctica de altura"
+            width="794"
+            height="596"
+            loading="lazy"
+            decoding="async"
+            class="academy-img academy-img--primary"
+          />
+          <img
+            src="/images/trapezio-trapeze.webp"
+            alt="Práctica de trapecio fijo y suspensión escénica"
+            width="600"
+            height="400"
+            loading="lazy"
+            decoding="async"
+            class="academy-img academy-img--secondary"
+          />
+        </div>
+
+        <div class="academy-body">
+          <h2 id="formacion-destacada-titulo" class="academy-heading">Formación y talleres</h2>
+          <p class="academy-text">
+            AÉREA es un espacio para entrenar, investigar y crecer como intérprete de circo contemporáneo y artes del movimiento. Contamos con recorridos por niveles desde iniciación sin experiencia previa hasta entrenamiento avanzado para artistas escénicos.
+          </p>
+          <p class="academy-text">
+            Nuestros cursos regulares de temporada abarcan telas aéreas, trapecio, acrobacia de suelo, malabarismo, equilibrio y expresión corporal, con grupos reducidos y acompañamiento técnico personalizado.
+          </p>
+          <p class="academy-text">
+            Además, abrimos talleres intensivos de fin de semana y laboratorios de creación junto a docentes invitados de Chile y Latinoamérica.
+          </p>
+          <div class="academy-actions">
+            <a href="/formacion" class="academy-cta academy-cta--primary hover-tactile-press">
+              Ver catálogo de cursos
+            </a>
+            <a href="/contacto" class="academy-cta academy-cta--secondary hover-editorial-underline">
+              Consultar horarios e inscripción
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-academy {
+    background-color: var(--color-bg);
+    padding-block: 4rem;
+  }
+
+  .academy-frame {
+    position: relative;
+    background-color: var(--color-accent-contrast);
+    border-right: 14px solid var(--color-primary);
+    border-bottom: 14px solid var(--color-primary);
+  }
+
+  .academy-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .academy-media-stack {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  .academy-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  .academy-img--primary {
+    aspect-ratio: 4 / 3;
+  }
+
+  .academy-img--secondary {
+    aspect-ratio: 16 / 9;
+  }
+
+  .academy-body {
+    padding: 2.5rem 3rem 2.5rem 0;
+  }
+
+  .academy-heading {
+    margin: 0 0 1.5rem 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 2.8vw, 2.375rem);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    color: var(--color-heading);
+  }
+
+  .academy-text {
+    margin: 0 0 1.15rem 0;
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    color: var(--color-text);
+    text-wrap: pretty;
+  }
+
+  .academy-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .academy-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    font-family: var(--font-display);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .academy-cta--primary {
+    padding: 0.75rem 1.75rem;
+    background-color: var(--color-accent);
+    color: var(--color-accent-contrast);
+    transition: background-color var(--duration-fast) var(--ease-out), transform 140ms var(--ease-out);
+  }
+
+  .academy-cta--secondary {
+    padding: 0.75rem 0.25rem;
+    color: var(--color-primary);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .academy-cta--primary:hover,
+    .academy-cta--primary:focus-visible {
+      background-color: var(--color-accent-hover);
+    }
+  }
+
+  @media (max-width: 960px) {
+    .academy-grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 2rem;
+    }
+
+    .academy-media-stack {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .academy-body {
+      padding: 0 1.5rem 2rem 1.5rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .section-academy {
+      padding-block: 2.5rem;
+    }
+
+    .academy-frame {
+      border-right-width: 8px;
+      border-bottom-width: 8px;
+    }
+
+    .academy-img--secondary {
+      display: none;
+    }
+
+    .academy-media-stack {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .academy-body {
+      padding: 0 1.25rem 1.75rem 1.25rem;
+    }
+  }
+</style>

@@ -1,0 +1,91 @@
+---
+const partners = [
+  { name: 'Red Circo Contemporáneo Chile', code: 'RCC' },
+  { name: 'Espacio Cultural Ñuñoa', code: 'ECÑ' },
+  { name: 'Plataforma Escénica Sur', code: 'PES' },
+  { name: 'Encuentro de Danza Aérea', code: 'EDA' },
+  { name: 'Archivo Corporal Santiago', code: 'ACS' },
+  { name: 'Red Latinoamericana de Circo', code: 'RLC' },
+];
+---
+
+<section id="alianzas" class="section-partners" aria-label="Redes y alianzas culturales">
+  <div class="forja-container">
+    <div class="partners-row" data-forja-reveal>
+      {partners.map((partner) => (
+        <div class="partner-mark">
+          <svg
+            width="172"
+            height="56"
+            viewBox="0 0 172 56"
+            fill="none"
+            role="img"
+            aria-label={partner.name}
+            class="partner-svg"
+          >
+            <rect x="2" y="8" width="40" height="40" stroke="currentColor" stroke-width="1.75" />
+            <circle cx="22" cy="28" r="9" stroke="currentColor" stroke-width="1.5" />
+            <text
+              x="52"
+              y="32"
+              fill="currentColor"
+              font-family="Inter, sans-serif"
+              font-size="13"
+              font-weight="600"
+              letter-spacing="0.04em"
+            >
+              {partner.code}
+            </text>
+          </svg>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-partners {
+    background-color: var(--color-accent-contrast);
+    border-top: 1px solid var(--color-border);
+    padding-block: 3rem;
+  }
+
+  .partners-row {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .partner-mark {
+    color: var(--color-primary);
+    opacity: 0.88;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .partner-svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @media (max-width: 1024px) {
+    .partners-row {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 767px) {
+    .section-partners {
+      padding-block: 2rem;
+    }
+
+    .partners-row {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+  }
+</style>

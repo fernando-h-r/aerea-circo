@@ -1,0 +1,285 @@
+/* ============================================================
+   MOVIMIENTO — Capa Física y Cinética (Dominio 3 · GEMINI.md §2.3)
+   ============================================================ */
+
+a,
+button,
+.btn,
+.btn-primary,
+.btn-secondary {
+  transition:
+    color var(--duration-fast) var(--ease-out),
+    background-color var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out),
+    opacity var(--duration-fast) var(--ease-out);
+}
+
+/* Contrato Cinético Inviolable (:active <= 160ms, scale(0.97)) */
+.btn:active,
+.btn-primary:active,
+.btn-secondary:active,
+.mobile-nav-toggle:active,
+.hover-tactile-press:active,
+button:active {
+  transform: scale(0.97);
+  transition-duration: var(--duration-instant);
+}
+
+:focus-visible {
+  transition: none;
+}
+
+.form-input {
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-accent-contrast);
+}
+
+/* ==========================================================================
+   MATRIZ DE GOBERNANZA DE HOVERS (Protegida contra Sticky-Hover en Móvil)
+   Solo en dispositivos con puntero fino (@media hover: hover and pointer: fine)
+   ========================================================================== */
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover,
+  button:hover {
+    transform: translateY(var(--kinetic-lift-y));
+  }
+
+  .btn-primary:hover {
+    background-color: var(--cta-hover-bg, var(--color-accent-hover));
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary:hover {
+    transform: translateY(-2px);
+  }
+
+  .form-input:hover {
+    border-color: var(--color-border-hover);
+  }
+
+  .card {
+    transition:
+      transform var(--duration-base) var(--ease-out),
+      box-shadow var(--duration-base) var(--ease-out),
+      border-color var(--duration-base) var(--ease-out);
+  }
+
+  .card:hover {
+    transform: translateY(var(--kinetic-lift-y));
+    border-color: var(--color-border-hover);
+  }
+
+  /* Nivel 1: Institucional / Clínico / Judicial (MOTION_INTENSITY: 1-3) */
+  .hover-hairline-ink {
+    transition: border-color var(--duration-fast) var(--ease-out),
+                background-color var(--duration-fast) var(--ease-out);
+  }
+  .hover-hairline-ink:hover {
+    border-color: var(--color-border-hover);
+    background-color: color-mix(in oklch, var(--color-surface) 60%, transparent);
+  }
+
+  .hover-editorial-underline {
+    position: relative;
+    text-decoration: none;
+  }
+  .hover-editorial-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--duration-normal) var(--ease-out);
+  }
+  .hover-editorial-underline:hover::after {
+    transform: scaleX(1);
+  }
+
+  /* Nivel 2: Corporativo Técnico / Ingeniería / E-commerce (MOTION_INTENSITY: 4-6) */
+  .hover-directional-glide {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform var(--duration-fast) var(--ease-out);
+  }
+  .hover-directional-glide:hover {
+    transform: translateX(var(--kinetic-glide-x));
+  }
+  .hover-directional-glide [data-kinetic-icon] {
+    transition: transform var(--duration-fast) var(--ease-out);
+  }
+  .hover-directional-glide:hover [data-kinetic-icon] {
+    transform: translateX(var(--kinetic-glide-x));
+  }
+  .hover-directional-glide.is-diagonal:hover [data-kinetic-icon] {
+    transform: translate(var(--kinetic-glide-x), var(--kinetic-lift-y));
+  }
+
+  .hover-surface-spotlight,
+  .hover-border-spotlight {
+    transition: background-color var(--duration-fast) var(--ease-out),
+                box-shadow var(--duration-fast) var(--ease-out),
+                border-color var(--duration-fast) var(--ease-out);
+  }
+  .hover-surface-spotlight:hover,
+  .hover-border-spotlight:hover {
+    background-color: var(--color-surface-elevated);
+    border-color: var(--color-border-hover);
+    box-shadow: inset var(--kinetic-spotlight-width) 0 0 var(--color-accent);
+  }
+
+  .hover-mask-slide {
+    position: relative;
+    overflow: hidden;
+  }
+  .hover-mask-slide .mask-content-primary {
+    transition: transform var(--duration-normal) var(--ease-out);
+  }
+  .hover-mask-slide:hover .mask-content-primary {
+    transform: translateY(-100%);
+  }
+  .hover-mask-slide .mask-content-secondary {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform var(--duration-normal) var(--ease-out);
+  }
+  .hover-mask-slide:hover .mask-content-secondary {
+    transform: translateY(-100%);
+  }
+
+  /* Nivel 3: Vanguardia / Estudio Creativo / Lujo (MOTION_INTENSITY: 7-10) */
+  .hover-kinetic-lift {
+    transition: transform var(--duration-fast) var(--ease-out),
+                border-color var(--duration-fast) var(--ease-out),
+                box-shadow var(--duration-fast) var(--ease-out);
+  }
+  .hover-kinetic-lift:hover {
+    transform: translateY(var(--kinetic-lift-y));
+    border-color: var(--color-border-hover);
+    box-shadow: 0 8px 24px -6px oklch(0 0 0 / 0.12);
+  }
+
+  .hover-media-zoom,
+  .hover-scale-subtle {
+    overflow: hidden;
+    transition: transform var(--duration-fast) var(--ease-out);
+  }
+  .hover-scale-subtle:hover {
+    transform: scale(var(--kinetic-scale));
+  }
+  .hover-media-zoom img,
+  .hover-media-zoom video {
+    transition: transform var(--duration-slow) var(--ease-out);
+  }
+  .hover-media-zoom:hover img,
+  .hover-media-zoom:hover video {
+    transform: scale(var(--kinetic-scale));
+  }
+
+  .hover-glow-surface {
+    transition: background-color var(--duration-fast) var(--ease-out),
+                box-shadow var(--duration-fast) var(--ease-out);
+  }
+  .hover-glow-surface:hover {
+    background-color: var(--color-surface-elevated);
+  }
+
+  .hover-accent-fill {
+    transition: background-color var(--duration-fast) var(--ease-out),
+                color var(--duration-fast) var(--ease-out);
+  }
+  .hover-accent-fill:hover {
+    background-color: var(--color-accent);
+    color: var(--color-accent-contrast);
+  }
+
+  .hover-text-reveal {
+    transition: color var(--duration-fast) var(--ease-out);
+  }
+  .hover-text-reveal:hover {
+    color: var(--color-accent);
+  }
+}
+
+/* Estados de pendiente */
+[data-pending] button[type='submit'],
+button[aria-busy='true'],
+.form button[type='submit']:disabled {
+  pointer-events: none;
+  opacity: 0.7;
+  cursor: progress;
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-border) 25%,
+    var(--color-surface) 50%,
+    var(--color-border) 75%
+  );
+  background-size: 200% 100%;
+  animation: wz-skeleton var(--duration-slow) var(--ease-in-out) infinite;
+}
+
+.skeleton:hover,
+.skeleton:focus-within {
+  animation-play-state: paused;
+}
+
+@keyframes wz-skeleton {
+  from { background-position: 200% 0; }
+  to   { background-position: -200% 0; }
+}
+
+/* Neutralización real en prefers-reduced-motion (GEMINI.md Dominio 3) */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-factor: 0;
+    --cta-hover-lift: 0px;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-forja-reveal="pending"] {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+
+  html.forja-motion-ready [data-forja-reveal="pending"],
+  html.forja-motion-ready [data-forja-reveal="in"] {
+    transition:
+      transform 680ms var(--ease-expo, cubic-bezier(0.16, 1, 0.3, 1)) var(--forja-reveal-delay, 0ms),
+      opacity 520ms var(--ease-out, cubic-bezier(0.22, 1, 0.36, 1)) calc(var(--forja-reveal-delay, 0ms) + 40ms);
+  }
+
+  [data-forja-reveal="in"] {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

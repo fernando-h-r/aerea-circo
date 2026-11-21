@@ -1,0 +1,286 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.astro';
+import Footer from '@/components/layout/Footer.astro';
+import PageBanner from '@/components/sections/PageBanner.astro';
+import site from '@/content/site.json';
+
+const productions = [
+  {
+    title: 'Vértigo de Barro',
+    year: '2025',
+    duration: '55 minutos',
+    image: '/images/duet-aerial-silk-fred-deb.webp',
+    alt: 'Escena de dúo en telas aéreas del montaje Vértigo de Barro',
+    synopsis:
+      'Dos cuerpos suspendidos trazan una partitura sobre la fragilidad, el peso compartido y el retorno a la tierra. Telas aéreas, acrobacia de suelo y guitarra eléctrica en vivo.',
+    credits:
+      'Dirección: Camila Valenzuela · Elenco: Matías Orellana, Camila Valenzuela, Florencia Riquelme · Iluminación: Javiera Méndez · Registro audiovisual: Archivo Escénico Santiago (teaser 03:40 min).',
+  },
+  {
+    title: 'Cuerpos Suspendidos',
+    year: '2024',
+    duration: '45 minutos',
+    image: '/images/trapezio-trapeze.webp',
+    alt: 'Intérprete en trapecio fijo durante Cuerpos Suspendidos',
+    synopsis:
+      'Pieza de cámara para sala íntima que explora el trapecio fijo, el equilibrio sobre alambre y la quietud previa al salto.',
+    credits:
+      'Dirección colectiva AÉREA · Elenco: Tomás Sepúlveda, Matías Orellana · Rigging: Equipo Técnico Ñuñoa · Registro audiovisual: Sesión completa Teatro Sidarte (HD, 45 min).',
+  },
+  {
+    title: 'Línea Tensa',
+    year: '2023',
+    duration: '40 minutos',
+    image: '/images/high-wire.webp',
+    alt: 'Artista en equilibrio sobre alambre tenso en Línea Tensa',
+    synopsis:
+      'Un recorrido por la cuerda floja, el malabarismo rítmico y la respiración grupal para espacios no convencionales y patios culturales.',
+    credits:
+      'Creación e interpretación: Tomás Sepúlveda, Florencia Riquelme · Producción: Diego Santibáñez · Registro audiovisual: Cápsula Festival Cielos del Sur (02:15 min).',
+  },
+];
+
+const upcomingDates = [
+  {
+    date: 'Sábado 5 de diciembre · 20:00 h',
+    show: 'Vértigo de Barro',
+    venue: 'Galpón AÉREA, Av. Irarrázaval 1480, Ñuñoa',
+    note: 'Función abierta con conversatorio posterior.',
+  },
+  {
+    date: 'Viernes 11 de diciembre · 19:30 h',
+    show: 'Cuerpos Suspendidos',
+    venue: 'Casa de la Cultura de Ñuñoa, Santiago',
+    note: 'Entrada general previa reserva directa.',
+  },
+  {
+    date: 'Domingo 20 de diciembre · 18:30 h',
+    show: 'Línea Tensa + Muestra de Escuela',
+    venue: 'Galpón AÉREA, Ñuñoa',
+    note: 'Cierre de temporada 2026 junto a estudiantes.',
+  },
+];
+---
+
+<BaseLayout
+  title={`Espectáculos · ${site.brand.name}`}
+  description="Portafolio de producciones propias de AÉREA y próximas presentaciones en Santiago de Chile."
+>
+  <Header />
+  <main id="top">
+    <PageBanner
+      title="Espectáculos"
+      subtitle="Producciones propias de la compañía AÉREA y calendario de próximas presentaciones."
+      image="/images/duet-aerial-silk-fred-deb.webp"
+      imageAlt="Presentación de la compañía AÉREA en telas aéreas"
+    />
+
+    <section class="shows-section shows-section--light">
+      <div class="forja-container shows-list">
+        <h2 class="shows-h2">Portafolio de producciones</h2>
+        {productions.map((p) => (
+          <article class="show-item" data-forja-reveal>
+            <div class="show-item__media">
+              <img
+                src={p.image}
+                alt={p.alt}
+                width="960"
+                height="540"
+                loading="lazy"
+                decoding="async"
+                class="show-item__img"
+              />
+            </div>
+            <div class="show-item__body">
+              <div class="show-item__meta">
+                <span>{p.year}</span>
+                <span>Duración: {p.duration}</span>
+              </div>
+              <h3 class="show-item__title">{p.title}</h3>
+              <p class="show-item__synopsis">{p.synopsis}</p>
+              <p class="show-item__credits">
+                <strong>Ficha artística y registro audiovisual:</strong> {p.credits}
+              </p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section id="proximas" class="shows-section shows-section--rose">
+      <div class="forja-container">
+        <h2 class="shows-h2">Próximas presentaciones</h2>
+        <div class="dates-grid">
+          {upcomingDates.map((d) => (
+            <article class="date-item" data-forja-reveal>
+              <p class="date-when">{d.date}</p>
+              <h3 class="date-show">{d.show}</h3>
+              <p class="date-venue">{d.venue}</p>
+              <p class="date-note">{d.note}</p>
+            </article>
+          ))}
+        </div>
+        <div class="dates-actions">
+          <a href="/contacto" class="dates-cta hover-tactile-press">
+            Reservar entradas por WhatsApp o correo
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .shows-section {
+    padding-block: 4rem;
+  }
+
+  .shows-section--light {
+    background-color: var(--color-bg);
+  }
+
+  .shows-section--rose {
+    background-color: var(--color-surface-rose);
+    color: var(--color-primary);
+  }
+
+  .shows-h2 {
+    margin: 0 0 2rem 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 2.8vw, 2.375rem);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    color: var(--color-heading);
+  }
+
+  .shows-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .show-item {
+    display: grid;
+    grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
+    gap: 2.5rem;
+    align-items: center;
+    background-color: var(--color-accent-contrast);
+    border-right: 12px solid var(--color-primary);
+  }
+
+  .show-item__img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    display: block;
+  }
+
+  .show-item__body {
+    padding: 2rem 2.5rem 2rem 0;
+  }
+
+  .show-item__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-accent);
+  }
+
+  .show-item__title {
+    margin: 0 0 1rem 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+    font-weight: 700;
+    color: var(--color-heading);
+  }
+
+  .show-item__synopsis {
+    margin: 0 0 1rem 0;
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    color: var(--color-text);
+  }
+
+  .show-item__credits {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: var(--color-text-muted);
+  }
+
+  .dates-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  .date-item {
+    border-top: 4px solid var(--color-primary);
+    padding-top: 1.25rem;
+  }
+
+  .date-when {
+    margin: 0 0 0.5rem 0;
+    font-family: var(--font-display);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+
+  .date-show {
+    margin: 0 0 0.5rem 0;
+    font-family: var(--font-display);
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+
+  .date-venue,
+  .date-note {
+    margin: 0 0 0.4rem 0;
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+    color: var(--color-primary);
+  }
+
+  .dates-actions {
+    margin-top: 2.5rem;
+  }
+
+  .dates-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0.75rem 1.75rem;
+    background-color: var(--color-primary);
+    color: var(--color-accent-contrast);
+    font-family: var(--font-display);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  @media (max-width: 960px) {
+    .show-item,
+    .dates-grid {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1.5rem;
+    }
+
+    .show-item__body {
+      padding: 0 1.25rem 2rem 1.25rem;
+    }
+  }
+</style>

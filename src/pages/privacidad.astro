@@ -1,0 +1,65 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import siteData from '@/content/site.json';
+
+const brandName = siteData?.brand?.name || 'Sitio Oficial';
+const city = siteData?.contact?.city || 'Santiago, Chile';
+const email = siteData?.contact?.email || 'contacto@ejemplo.com';
+const updatedAt = siteData?.brand?.updatedAt || '2026';
+const fields = siteData?.legal?.collectedFields || ['Nombre', 'Correo'];
+---
+
+<BaseLayout
+  title={`Política de Privacidad | ${brandName}`}
+  description={`Política de privacidad y tratamiento de datos personales de ${brandName}.`}
+>
+  <main id="contenido-principal" class="mx-auto max-w-3xl px-4 py-16 space-y-6">
+    <a href="/" class="inline-flex min-h-[44px] items-center text-sm underline">
+      ← Volver al inicio
+    </a>
+    <h1 class="text-3xl font-semibold tracking-tight">
+      Política de Privacidad y Tratamiento de Datos
+    </h1>
+    <p class="text-base leading-relaxed">
+      Conforme a la normativa vigente sobre protección de datos personales y privacidad aplicable. Última actualización: {updatedAt}.
+    </p>
+
+    <section aria-labelledby="priv-1" class="space-y-2">
+      <h2 id="priv-1" class="text-xl font-medium">1. Responsable del Tratamiento</h2>
+      <p class="text-base leading-relaxed">
+        El responsable del tratamiento de los datos recabados en este sitio es <strong>{brandName}</strong>, con domicilio en {city}, y canal oficial de contacto en <code>{email}</code>.
+      </p>
+    </section>
+
+    <section aria-labelledby="priv-2" class="space-y-2">
+      <h2 id="priv-2" class="text-xl font-medium">2. Datos Recabados y Finalidad Específica</h2>
+      <p class="text-base leading-relaxed">
+        Tratamos exclusivamente los datos personales entregados voluntariamente en nuestros formularios de contacto o contratación ({fields.join(', ')}).
+      </p>
+      <p class="text-base leading-relaxed">
+        <strong>Finalidad:</strong> Atender consultas técnicas, coordinar servicios requeridos por el titular y gestionar la relación precontractual o contractual solicitada. No se realizan cesiones comerciales ni perfilamiento no consentido.
+      </p>
+    </section>
+
+    <section aria-labelledby="priv-3" class="space-y-2">
+      <h2 id="priv-3" class="text-xl font-medium">3. Base de Licitud y Plazo de Conservación</h2>
+      <p class="text-base leading-relaxed">
+        El tratamiento se fundamenta en el <strong>consentimiento previo, libre, informado e inequívoco</strong> otorgado mediante la casilla explícita del formulario, conservándose únicamente durante la gestión de la solicitud o vigencia de la relación comercial.
+      </p>
+    </section>
+
+    <section aria-labelledby="priv-4" class="space-y-2">
+      <h2 id="priv-4" class="text-xl font-medium">4. Derechos del Titular (ARCO+)</h2>
+      <p class="text-base leading-relaxed">
+        El titular puede ejercer en todo momento sus derechos de Acceso, Rectificación, Supresión, Oposición, Portabilidad y Bloqueo escribiendo a <code>{email}</code>. Plazo máximo de respuesta: <strong>30 días corridos</strong>.
+      </p>
+    </section>
+
+    <section aria-labelledby="priv-5" class="space-y-2">
+      <h2 id="priv-5" class="text-xl font-medium">5. Cookies y Analítica Web</h2>
+      <p class="text-base leading-relaxed">
+        Este sitio no utiliza cookies de publicidad ni perfilamiento comercial cruzado. Los registros técnicos de navegación se limitan a métricas agregadas de disponibilidad y rendimiento sin perfilamiento personal.
+      </p>
+    </section>
+  </main>
+</BaseLayout>

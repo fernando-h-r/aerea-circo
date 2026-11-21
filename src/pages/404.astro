@@ -1,0 +1,21 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import siteData from '@/content/site.json';
+
+const brandName = siteData?.brand?.name || 'Sitio Oficial';
+---
+
+<BaseLayout title={`Página no encontrada | ${brandName}`}>
+  <main class="mx-auto flex min-h-[70svh] max-w-3xl flex-col justify-center gap-4 px-4 py-16">
+    <span class="text-sm uppercase tracking-wider opacity-70">Error 404</span>
+    <h1 class="text-3xl font-semibold tracking-tight">Página no encontrada</h1>
+    <p class="text-base opacity-80">
+      El destino solicitado no existe, ha cambiado de ubicación o fue retirado temporalmente.
+    </p>
+    <div>
+      <a href="/" class="btn-primary inline-flex min-h-[44px] items-center px-5 py-3 text-sm font-medium">
+        Volver al inicio
+      </a>
+    </div>
+  </main>
+</BaseLayout>

@@ -1,0 +1,25 @@
+{
+  "slug": "aerea-circo",
+  "stack": "astro",
+  "via": "via1",
+  "mode": "adaptation",
+  "seed": "none",
+  "sector": "architecture",
+  "antiSlopFilter": true,
+  "skipRecon": false,
+  "auto": false,
+  "prompt": "# AÉREA — Escuela de circo contemporáneo\n\nDiseña un sitio web multipágina para AÉREA, una escuela y compañía de circo contemporáneo ubicada en Santiago de Chile.\nAÉREA combina formación artística, acrobacia, danza aérea, malabarismo y artes escénicas. Ofrece cursos regulares, talleres intensivos y formación especializada. También cuenta con una compañía propia que desarrolla y presenta espectáculos.\n\nReferencia visual: https://www.circomedia.com/ (interpretar lenguaje visual, composición, navegación, jerarquías tipográficas y distribución; no reproducir identidad gráfica ni textos).\n\nEstructura multipágina:\n1. Inicio (/): Presentación de AÉREA, propuesta de la escuela, disciplinas principales, cursos disponibles, próximos espectáculos y accesos.\n2. La escuela (/la-escuela): Historia, filosofía, equipo docente, instalaciones y metodología de enseñanza (espacio de formación artística, no gimnasio).\n3. Disciplinas (/disciplinas): Telas aéreas, Trapecio, Acrobacia de suelo, Malabarismo, Equilibrio y técnicas circenses, Expresión corporal y movimiento (descripción, fotografías y niveles).\n4. Formación y talleres (/formacion): Catálogo de cursos regulares, talleres intensivos y programas de formación (niveles, duración, contenidos, horarios, público).\n5. Compañía (/compania): Enfoque creativo, integrantes y proceso de creación de espectáculos.\n6. Espectáculos (/espectaculos): Portafolio de producciones propias (fotografías, sinopsis, fichas artísticas, duración, registros audiovisuales) y próximas presentaciones.\n7. Contacto (/contacto): Ubicación, horarios de atención, inscripción y canales directos por WhatsApp y correo electrónico. Sin formularios.\n\nIdentidad cromática (WCAG 2.2 AA obligatorio):\n- Verde azulado principal: #043736\n- Cobre acento y botones: #A25524\n- Rosa empolvado: #D4BCC0\n- Verde oliva complementario: #7F8000\n- Blanco cálido superficie clara: #F5F1EB\n\nDirección de arte: Contemporánea, expresiva, artística. Fotografía de gran formato de artistas en movimiento, composiciones editoriales, jerarquías tipográficas marcadas, espacios negativos, contraste claro/oscuro. Evitar estética de circo infantil, carpas, payasos, vintage o gimnasio convencional. Todo en español natural.",
+  "referenceUrl": "https://www.circomedia.com/",
+  "pageMode": "multi",
+  "routes": [
+    "/",
+    "/la-escuela",
+    "/disciplinas",
+    "/formacion",
+    "/compania",
+    "/espectaculos",
+    "/contacto"
+  ],
+  "resolvedSeed": "none",
+  "brief": "# AÉREA — Escuela de circo contemporáneo Diseña un sitio web multipágina para AÉREA, una escuela y compañía de circo contemporáneo ubicada en Santiago de Chile. AÉREA combina formación artística, acrobacia, danza aérea, malabarismo y artes escénicas. Ofrece cursos regulares, talleres intensivos y formación especializad"
+}

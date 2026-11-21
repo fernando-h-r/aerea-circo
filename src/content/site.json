@@ -1,0 +1,65 @@
+{
+  "brand": {
+    "slug": "aerea-circo",
+    "name": "AÉREA",
+    "fullName": "AÉREA · Escuela y Compañía de Circo Contemporáneo",
+    "monogram": "AÉ",
+    "schemaType": "PerformingArtsTheater",
+    "url": "https://aerea-circo.cl",
+    "tagline": "Escuela y compañía de circo contemporáneo en Santiago de Chile.",
+    "legalNotice": "© 2026 AÉREA Escuela y Compañía de Circo Contemporáneo. Todos los derechos reservados.",
+    "updatedAt": "2026-11-21",
+    "sameAs": [
+      "https://instagram.com/aereacircochile",
+      "https://youtube.com/@aereacircochile",
+      "https://vimeo.com/aereacircochile"
+    ]
+  },
+  "nav": [
+    { "label": "Inicio", "href": "/" },
+    { "label": "La escuela", "href": "/la-escuela" },
+    { "label": "Disciplinas", "href": "/disciplinas" },
+    { "label": "Formación", "href": "/formacion" },
+    { "label": "Compañía", "href": "/compania" },
+    { "label": "Espectáculos", "href": "/espectaculos" },
+    { "label": "Contacto", "href": "/contacto" }
+  ],
+  "utilityNav": [
+    { "label": "Horarios", "href": "/formacion#horarios" },
+    { "label": "Cartelera", "href": "/espectaculos#proximas" },
+    { "label": "WhatsApp", "href": "https://wa.me/56974285190" }
+  ],
+  "ctaHeader": {
+    "label": "Inscripción",
+    "href": "/contacto"
+  },
+  "hero": {
+    "headline": "CIRCO CONTEMPORÁNEO EN MOVIMIENTO",
+    "image": "/images/duet-aerial-silk-fred-deb.webp",
+    "imageAlt": "Dos artistas de circo contemporáneo en telas aéreas color cobre suspendidas sobre escenario oscuro"
+  },
+  "contact": {
+    "phone": "+56 9 7428 5190",
+    "whatsappUrl": "https://wa.me/56974285190?text=Hola%20A%C3%89REA%2C%20quisiera%20informaci%C3%B3n%20sobre%20cursos%20y%20talleres.",
+    "whatsappMessage": "Hola AÉREA, quisiera información sobre cursos, talleres o funciones.",
+    "email": "contacto@aerea-circo.cl",
+    "address": "Av. Irarrázaval 1480, Galpón 3, Ñuñoa",
+    "city": "Santiago, Chile",
+    "hours": "Lunes a viernes de 09:30 a 21:30 h · Sábados de 10:00 a 16:00 h"
+  },
+  "footer": {
+    "links": [
+      { "label": "La escuela", "href": "/la-escuela" },
+      { "label": "Disciplinas", "href": "/disciplinas" },
+      { "label": "Formación", "href": "/formacion" },
+      { "label": "Compañía", "href": "/compania" },
+      { "label": "Espectáculos", "href": "/espectaculos" },
+      { "label": "Contacto", "href": "/contacto" }
+    ],
+    "social": [
+      { "label": "Instagram", "href": "https://instagram.com/aereacircochile" },
+      { "label": "YouTube", "href": "https://youtube.com/@aereacircochile" },
+      { "label": "Vimeo", "href": "https://vimeo.com/aereacircochile" }
+    ]
+  }
+}

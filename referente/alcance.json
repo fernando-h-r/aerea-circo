@@ -1,0 +1,93 @@
+{
+  "slug": "aerea-circo",
+  "targetUrl": "https://www.circomedia.com/",
+  "type": "MULTI_PAGE",
+  "navModel": "hybrid-nav",
+  "routes": [
+    {
+      "path": "/",
+      "slug": "",
+      "name": "Inicio",
+      "template": "landing",
+      "isHome": true
+    },
+    {
+      "path": "/introducing-our-academy/",
+      "slug": "introducing-our-academy",
+      "name": "Introducing Our Academy",
+      "template": "content-page",
+      "url": "https://www.circomedia.com/introducing-our-academy/",
+      "screenshot": "referente-introducing-our-academy.png"
+    },
+    {
+      "path": "/the-btec-course/",
+      "slug": "the-btec-course",
+      "name": "The Btec Course",
+      "template": "content-page",
+      "url": "https://www.circomedia.com/the-btec-course/",
+      "screenshot": "referente-the-btec-course.png"
+    },
+    {
+      "path": "/ba-hons-contemporary-circus-with-physical-theatre/",
+      "slug": "ba-hons-contemporary-circus-with-physical-theatre",
+      "name": "Ba Hons Contemporary Circus With Physical Theatre",
+      "template": "content-page",
+      "url": "https://www.circomedia.com/ba-hons-contemporary-circus-with-physical-theatre/",
+      "screenshot": "referente-ba-hons-contemporary-circus-with-physical-theatre.png"
+    }
+  ],
+  "operatorOverrides": [],
+  "geometry": {
+    "containerMaxWidth": {
+      "value": 1324,
+      "unit": "px",
+      "tolerance": 66,
+      "source": "recon",
+      "status": "verificable"
+    },
+    "headerHeightResting": {
+      "value": 124,
+      "unit": "px",
+      "tolerance": 12,
+      "source": "recon",
+      "status": "verificable"
+    },
+    "headerHeightScrolled": {
+      "value": 124,
+      "unit": "px",
+      "tolerance": 12,
+      "source": "recon",
+      "status": "verificable"
+    },
+    "headerHeroRelation": {
+      "value": "stacked",
+      "source": "recon",
+      "status": "verificable"
+    },
+    "headerBgResting": {
+      "value": "rgb(29, 125, 80)",
+      "source": "recon",
+      "status": "verificable"
+    },
+    "headerNavType": {
+      "value": "hybrid-nav",
+      "source": "recon",
+      "status": "verificable"
+    },
+    "headerActionStyle": {
+      "value": "text-only",
+      "source": "recon",
+      "status": "verificable"
+    },
+    "headerStrategy": {
+      "value": "flujo-normal",
+      "source": "recon",
+      "status": "verificable"
+    },
+    "masterPadding": {
+      "value": "4%",
+      "source": "recon",
+      "status": "verificable"
+    }
+  }
+}

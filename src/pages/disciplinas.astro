@@ -1,0 +1,201 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/layout/Header.astro';
+import Footer from '@/components/layout/Footer.astro';
+import PageBanner from '@/components/sections/PageBanner.astro';
+import site from '@/content/site.json';
+
+const disciplines = [
+  {
+    name: 'Telas aéreas',
+    image: '/images/duet-aerial-silk-fred-deb.webp',
+    alt: 'Dúo realizando figuras suspendidas en telas aéreas',
+    description:
+      'Trabajo vertical en tela doble que desarrolla fuerza de tracción, conciencia espacial y fluidez coreográfica. Exploramos trepadas, llaves, caídas controladas y transiciones en altura.',
+    levels: 'Iniciación (sin experiencia previa), Intermedio (dominio de inversión en el aire) y Avanzado (secuencias escénicas y caídas dinámicas).',
+  },
+  {
+    name: 'Trapecio',
+    image: '/images/trapezio-trapeze.webp',
+    alt: 'Artista ejecutando figura invertida en trapecio fijo',
+    description:
+      'Disciplina aérea clásica reinterpretada desde el movimiento contemporáneo. Trabajamos equilibrios sobre barra, corvas, giros, balanceos y diálogo con las cuerdas.',
+    levels: 'Iniciación, Intermedio y Avanzado en trapecio fijo y exploración en dúo.',
+  },
+  {
+    name: 'Acrobacia de suelo',
+    image: '/images/fijm-2013-014.webp',
+    alt: 'Práctica acrobática y control corporal en suspensión y suelo',
+    description:
+      'Base técnica para todo intérprete físico: verticales, rodadas, inversiones, saltos dinámicos y acrobacia en pareja (portes y equilibrios colectivos).',
+    levels: 'Básico (preparación articular y verticales), Intermedio y Entrenamiento escénico.',
+  },
+  {
+    name: 'Malabarismo',
+    image: '/images/aerial-silk-ilma-akrobatiaa-silkilla-c-img.webp',
+    alt: 'Espacio abierto de práctica circense y manipulación',
+    description:
+      'Manipulación contemporánea de pelotas, clavas y aros. Enfocada en el ritmo, la disociación corporal, el lanzamiento en grupo y la relación poética con el objeto.',
+    levels: 'Todos los niveles: desde patrones de tres objetos hasta composición escénica con cinco o más elementos.',
+  },
+  {
+    name: 'Equilibrio y técnicas circenses',
+    image: '/images/high-wire.webp',
+    alt: 'Artista en equilibrio sobre alambre tenso',
+    description:
+      'Entrenamiento de precisión y calma activa sobre alambre tenso, rola bola, monociclo y parada de manos. Fortalece el centro corporal y la concentración bajo movimiento.',
+    levels: 'Iniciación e Intermedio con progresiones asistidas y trabajo de eje.',
+  },
+  {
+    name: 'Expresión corporal y movimiento',
+    image: '/images/aerial-silk-ilma-akrobatiaa-silkilla-c-img-2.webp',
+    alt: 'Exploración de movimiento y danza aérea',
+    description:
+      'Laboratorio de danza contemporánea, improvisación y teatro físico orientado al circo. Investigamos calidades de peso, respiración, mirada y presencia en escena.',
+    levels: 'Abierto a todo público, artistas en formación e intérpretes de otras áreas.',
+  },
+];
+---
+
+<BaseLayout
+  title={`Disciplinas · ${site.brand.name}`}
+  description="Telas aéreas, trapecio, acrobacia de suelo, malabarismo, equilibrio y expresión corporal en AÉREA."
+>
+  <Header />
+  <main id="top">
+    <PageBanner
+      title="Disciplinas"
+      subtitle="Seis áreas de entrenamiento artístico y técnico organizadas por niveles de experiencia."
+      image="/images/trapezio-trapeze.webp"
+      imageAlt="Artista en trapecio fijo bajo luz escénica"
+    />
+
+    <section class="disciplines-section">
+      <div class="forja-container disciplines-list">
+        {disciplines.map((d, idx) => (
+          <article class={`discipline-row ${idx % 2 === 1 ? 'discipline-row--reverse' : ''}`} data-forja-reveal>
+            <div class="discipline-row__media">
+              <img
+                src={d.image}
+                alt={d.alt}
+                width="900"
+                height="600"
+                loading="lazy"
+                decoding="async"
+                class="discipline-row__img"
+              />
+            </div>
+            <div class="discipline-row__body">
+              <h2 class="discipline-row__title">{d.name}</h2>
+              <p class="discipline-row__desc">{d.description}</p>
+              <p class="discipline-row__levels">
+                <strong>Niveles disponibles:</strong> {d.levels}
+              </p>
+              <a href="/formacion" class="discipline-row__cta hover-tactile-press">
+                Ver cursos y horarios
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
+
+<style>
+  .disciplines-section {
+    background-color: var(--color-bg);
+    padding-block: 4rem;
+  }
+
+  .disciplines-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  .discipline-row {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 2.5rem;
+    align-items: center;
+    background-color: var(--color-accent-contrast);
+    border-bottom: 10px solid var(--color-primary);
+  }
+
+  .discipline-row--reverse {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  }
+
+  .discipline-row--reverse .discipline-row__media {
+    order: 2;
+  }
+
+  .discipline-row__img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+  }
+
+  .discipline-row__body {
+    padding: 2rem 2.5rem;
+  }
+
+  .discipline-row__title {
+    margin: 0 0 1rem 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.4vw, 2rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--color-heading);
+  }
+
+  .discipline-row__desc {
+    margin: 0 0 1rem 0;
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    color: var(--color-text);
+  }
+
+  .discipline-row__levels {
+    margin: 0 0 1.5rem 0;
+    font-family: var(--font-body);
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: var(--color-text-muted);
+  }
+
+  .discipline-row__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.65rem 1.5rem;
+    background-color: var(--color-accent);
+    color: var(--color-accent-contrast);
+    font-family: var(--font-display);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  @media (max-width: 960px) {
+    .discipline-row,
+    .discipline-row--reverse {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0;
+    }
+
+    .discipline-row--reverse .discipline-row__media {
+      order: 0;
+    }
+
+    .discipline-row__body {
+      padding: 1.5rem 1.25rem 2rem 1.25rem;
+    }
+  }
+</style>

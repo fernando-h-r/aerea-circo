@@ -1,0 +1,162 @@
+---
+const pillars = [
+  {
+    title: 'Estudia con nosotros',
+    ctaLabel: 'Ver formación',
+    href: '/formacion',
+    image: '/images/trapezio-trapeze.webp',
+    alt: 'Artista realizando figura invertida en trapecio fijo bajo iluminación escénica',
+  },
+  {
+    title: 'Cartelera y estrenos',
+    ctaLabel: 'Ver espectáculos',
+    href: '/espectaculos',
+    image: '/images/duet-aerial-silk-fred-deb.webp',
+    alt: 'Dúo de danza aérea en telas suspendidas en escenario oscuro',
+  },
+  {
+    title: 'La escuela en Santiago',
+    ctaLabel: 'Conocer la escuela',
+    href: '/la-escuela',
+    image: '/images/fijm-2013-014.webp',
+    alt: 'Intérprete suspendida en tela aérea ejecutando figura de equilibrio',
+  },
+];
+---
+
+<section id="propuesta" class="section-pillars" aria-label="Áreas principales de AÉREA">
+  <div class="forja-container">
+    <div class="pillars-grid">
+      {pillars.map((item, idx) => (
+        <article class="pillar-tile" data-forja-reveal data-forja-delay={idx * 70}>
+          <div class="pillar-tile__media" aria-hidden="true">
+            <img
+              src={item.image}
+              alt={item.alt}
+              width="600"
+              height="600"
+              loading="lazy"
+              decoding="async"
+              class="pillar-tile__img"
+            />
+            <div class="pillar-tile__scrim"></div>
+          </div>
+          <div class="pillar-tile__overlay">
+            <h2 class="pillar-tile__title">{item.title}</h2>
+            <a href={item.href} class="pillar-tile__cta hover-tactile-press">
+              {item.ctaLabel}
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-pillars {
+    padding-block: 3.5rem 2rem;
+    background-color: var(--color-bg);
+  }
+
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .pillar-tile {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: var(--color-surface-deep);
+  }
+
+  .pillar-tile__media {
+    position: absolute;
+    inset: 0;
+  }
+
+  .pillar-tile__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 360ms var(--ease-out);
+  }
+
+  .pillar-tile__scrim {
+    position: absolute;
+    inset: 0;
+    background: var(--hero-scrim-mobile);
+  }
+
+  .pillar-tile__overlay {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 0;
+  }
+
+  .pillar-tile__title {
+    margin: 0;
+    padding: 1.25rem 1.5rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.375rem, 2.2vw, 1.875rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--color-accent-contrast);
+  }
+
+  .pillar-tile__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-accent);
+    color: var(--color-accent-contrast);
+    font-family: var(--font-display);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color var(--duration-fast) var(--ease-out), transform 140ms var(--ease-out);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .pillar-tile:hover .pillar-tile__img {
+      transform: scale(1.04);
+    }
+
+    .pillar-tile__cta:hover,
+    .pillar-tile__cta:focus-visible {
+      background-color: var(--color-accent-hover);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .section-pillars {
+      padding-block: 2rem 1.25rem;
+    }
+
+    .pillars-grid {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      touch-action: pan-x pan-y;
+      gap: 1rem;
+      padding-bottom: 0.5rem;
+    }
+
+    .pillar-tile {
+      flex: 0 0 82%;
+      scroll-snap-align: start;
+      aspect-ratio: 4 / 3;
+    }
+  }
+</style>
