@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 
-export const prerender = false;
+export const prerender = true;
 
 export const GET: APIRoute = ({ site, url }) => {
   const origin = (import.meta.env.PUBLIC_SITE_URL || site?.origin || url.origin).replace(/\/$/, '');

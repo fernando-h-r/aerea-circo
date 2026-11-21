@@ -25,38 +25,8 @@ const securityHeaders = {
   ].join('; '),
 };
 
-const forjaSsrAdapter = {
-  name: 'forja-node-ssr',
-  hooks: {
-    'astro:config:setup': ({ updateConfig }) => {
-      updateConfig({
-        vite: {
-          build: {
-            rolldownOptions: {
-              input: 'astro/entrypoints/prerender',
-            },
-          },
-        },
-      });
-    },
-    'astro:config:done': ({ setAdapter }) => {
-      setAdapter({
-        name: 'forja-node-ssr',
-        entrypointResolution: 'auto',
-        supportedAstroFeatures: {
-          staticOutput: 'stable',
-          hybridOutput: 'stable',
-          serverOutput: 'stable',
-          envGetSecret: 'stable',
-          sharpImageService: 'stable',
-        },
-      });
-    },
-  },
-};
-
 export default defineConfig({
-  adapter: forjaSsrAdapter,
+  output: 'static',
   devToolbar: { enabled: false },
   security: {
     checkOrigin: true,
