@@ -277,6 +277,13 @@ function isActive(href: string): boolean {
     box-shadow: inset 0 -2px 0 var(--color-accent);
   }
 
+  @media (hover: hover) and (pointer: fine) {
+    .site-header__nav-link:hover,
+    .site-header__nav-link:focus-visible {
+      color: var(--color-rose);
+    }
+  }
+
   .site-header__mobile-actions {
     display: none;
     align-items: center;
